@@ -1,0 +1,8 @@
+.hero__background {
+  background-image: url("./assets/snow.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: screen;
+  width: 100%;
+  background-size: cover;
+}

@@ -1,0 +1,9 @@
+export { default as Navbar } from "./Navbar";
+export { default as Footer } from "./Footer";
+export { default as HeroSection } from "./HeroSection";
+export { default as Sidebar } from "./Sidebar";
+export { default as FitureOffer } from "./FitureOffer";
+export { default as Testimonial } from "./Testimonial";
+export { default as FAQ } from "./FAQ";
+export { default as CardPrice } from "./CardPrice";
+export { default as Table } from "./Table";

@@ -1,0 +1,13 @@
+export { default as Games } from "./games.webp";
+export { default as Vpn } from "./vpn.webp";
+export { default as Hosting } from "./hosting.webp";
+export { default as Roket } from "./rocket.webp";
+export { default as Hero } from "./server.webp";
+export { default as Pengu } from "./pengu.webp";
+export { default as Samsungpro } from "./Samsungpro.png";
+export { default as Samsungetc } from "./samsungetc.png";
+export { default as amd } from "./amd.png";
+export { default as alarm } from "./alarm.webp";
+export { default as fast } from "./fast.svg";
+export { default as wavesTwo } from "./wavesTwo.svg";
+export { default as wavesOne } from "./wavesOne.svg";
