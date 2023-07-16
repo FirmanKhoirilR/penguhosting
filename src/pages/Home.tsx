@@ -1,3 +1,4 @@
+import { wavesOne } from "../assets";
 import { FAQ, FitureOffer, HeroSection, Testimonial } from "../components";
 
 const Home = () => {
@@ -7,8 +8,9 @@ const Home = () => {
       <FitureOffer />
       <Testimonial />
       <FAQ />
+      <img src={wavesOne} alt="waves" className="absolute" />
       <div className="text-center flex gap-10 flex-col font-extrabold pt-20 md:pt-40 pb-10 uppercase  text-white bg-black/30">
-        <h1 className="text-[40px] md:text-[56px]">werde teil der penguhosting community</h1>
+        <h1 className="text-[40px] md:text-[56px] transition duration-300 hover:text-yellow-500">werde teil der penguhosting community</h1>
         <div className="">
           <a
             href="https://discord.gg/rxRhb7msbs"

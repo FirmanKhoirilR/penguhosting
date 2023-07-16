@@ -10,7 +10,7 @@ const Footer = () => {
         <Box sx={{ display: "flex", gap: { xs: 2, sm: 5, md: 10 }, flexWrap: "wrap", flexDirection: { md: "row", xs: "column" }, pb: 6, pt: 4 }}>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
             <img src={logo} className="w-72 h-24  bg-blend-color-burn" alt="Logo PenguHosting" />
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
               {sosialMedia.map((item) => (
                 <a className={` text-yellow-500 transition duration-300 hover:text-yellow-300 p-2 text-3xl rounded-full`} href={item.url} key={item.name}>
                   {item.icon}

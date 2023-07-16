@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
 import { navbarLink } from "../utils/Dummydata";
 import Pengu from "../assets/logo.webp";
-import { AiOutlineMenu, AiOutlineUserAdd } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineUserAdd, AiOutlineClose } from "react-icons/ai";
 import { useGlobalContext } from "../hooks/StateContext";
-
-type TLink = {
-  url: string;
-  name: string;
-};
+import { TLink } from "../types/Types";
 
 const Navbar = () => {
-  const { linkName, setLinkName }: any = useGlobalContext();
+  const { linkName, setLinkName, toogleSidebar, setToogleSidebar }: any = useGlobalContext();
 
   return (
     <nav className="p-3 flex items-center shadow-md sticky top-0 z-20 justify-between md:justify-around bg-white">
@@ -37,8 +33,8 @@ const Navbar = () => {
           Login
         </Link>
       </div>
-      <button type="button" className="p-2 md:hidden inline-block" aria-label="buttonMenu" name="buttonMenu">
-        <AiOutlineMenu size={25} />
+      <button type="button" onClick={() => setToogleSidebar((prev: boolean) => !prev)} className="p-2 md:hidden inline-block" aria-label="buttonMenu" name="buttonMenu">
+        {toogleSidebar ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
       </button>
     </nav>
   );

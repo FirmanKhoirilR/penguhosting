@@ -4,12 +4,19 @@ import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ContextProvider } from "./hooks/StateContext.tsx";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const client = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <ContextProvider>
-        <App />
+        <QueryClientProvider client={client}>
+          <ReactQueryDevtools />
+          <App />
+        </QueryClientProvider>
       </ContextProvider>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,8 +1,8 @@
 import { cardHome, sosialMedia } from "../utils/Dummydata";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { TCard } from "../types/Types";
+import { CardGame } from ".";
 
 const HeroSection = () => {
   return (
@@ -18,15 +18,7 @@ const HeroSection = () => {
       <div className="flex flex-col">
         <div className="flex items-center flex-wrap justify-center md:flex-row p-2 flex-col mt-4 gap-4">
           {cardHome.map((item: TCard) => (
-            <Link to={item.url} key={item.name} className="group relative shadow-[0px_8px_12px_2px_rgb(0,0,0,0.6)] flex flex-col items-center gap-2 md:w-[200px] w-full h-[250px] object-fill overflow-hidden rounded-sm">
-              <img src={item.image} alt={item.name} width={200} height={200} className="h-[250px] group-hover:scale-125 transition duration-1000 w-full object-fill md:w-[200px] ease-in-out" />
-              <div className="absolute bg-black/40 text-white flex flex-col gap-3 items-center justify-center h-[250px] w-full">
-                <span className="text-blue-100">{item.icon}</span>
-                <h1 className="font-bold text-[22px]">{item.name}</h1>
-                <span className="text-[22px] font-bold">AB {item.price}</span>
-                <button className="tracking-tighter text-sm py-2 px-3 hover:bg-blue-600 rounded-sm bg-blue-500">JETZT KAUFEN</button>
-              </div>
-            </Link>
+            <CardGame item={item} key={item.name} />
           ))}
         </div>
         <div className="mt-10 flex text-white  justify-center md:justify-start gap-4 items-center">

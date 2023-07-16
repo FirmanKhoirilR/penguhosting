@@ -8,12 +8,62 @@ export type TCardPrice = {
   description: string;
 };
 
+export interface IDataDomain {
+  item: {
+    create_date: string;
+    domain_name: string;
+    domain_registered: string;
+    domain_registrar: {
+      email_address: string;
+      phone_number: string;
+      website_url: string;
+      whois_server: string;
+    };
+    query_time: string;
+    registrant_contact: {
+      company: string;
+      country_code: string;
+      country_name: string;
+      email_address: string;
+    };
+    status: boolean;
+    updated_date: string;
+    expiry_date: string;
+  };
+}
+
+export interface IFitureHosting {
+  item: {
+    icon: Element | any;
+    title: string;
+    desc: string;
+  };
+}
+export type TFitureHosting = {
+  icon: Element | any;
+  title: string;
+  desc: string;
+};
 export type TCard = {
   image: any;
-  icon: any;
+  icon?: any;
   name: string;
   price: string;
+  url?: string | any;
+};
+export interface ICard {
+  item: {
+    image: any;
+    icon?: any;
+    name: string;
+    price: string;
+    url?: string | any;
+  };
+}
+
+export type TLink = {
   url: string;
+  name: string;
 };
 
 export type TOffer = {
@@ -22,6 +72,14 @@ export type TOffer = {
   descriptionTwo?: string;
   image: any;
 };
+export interface IOffer {
+  item: {
+    title: string;
+    descriptionOne?: string | null;
+    descriptionTwo?: string;
+    image: any;
+  };
+}
 export type TTestimonial = {
   title: string;
   description: string;

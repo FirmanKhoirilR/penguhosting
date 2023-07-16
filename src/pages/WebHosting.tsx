@@ -1,13 +1,16 @@
-import { CardPrice, Table } from "../components";
-import { TCardPrice, TTable } from "../types/Types";
-import { paketeHosting, webHosting } from "../utils/Dummydata";
+import { CardPrice, FitureHosting, SearchDomain, Table } from "../components";
+import { TCardPrice, TFitureHosting, TTable } from "../types/Types";
+import { fituresHosting, paketeHosting, webHosting } from "../utils/Dummydata";
 import { alarm, fast, wavesTwo, wavesOne } from "../assets";
+import { Container } from "@mui/material";
 
 const WebHosting = () => {
   return (
-    <section className="py-20 bg-slate-100 mx-[6px]">
-      <div className="text-center">
-        <h1 className="text-[36px] font-extrabold px-2 text-blue-400">Beginnen Sie mit günstigem Hosting von PenguHosting</h1>
+    <section className="pb-20 bg-slate-100 mx-[6px]">
+      <SearchDomain />
+      <img src={wavesOne} alt="waves blue" className="absolute mx-[-6px]" />
+      <div className="text-center mt-20 md:mt-48">
+        <h1 className=" text-[30px] md:text-[36px] font-extrabold px-2 text-blue-400">Beginnen Sie mit günstigem Hosting von PenguHosting</h1>
         <p className="text-black/70">
           Bringen Sie Ihr Unternehmen online mit günstigem Hosting von PenguHosting. <br className="md:inline-block hidden" /> Genießen Sie Rabatte von bis zu 65% !
         </p>
@@ -21,7 +24,7 @@ const WebHosting = () => {
         <span className="text-yellow-500 uppercase text-[18px]"> unsere features</span>
         <h1 className="text-[32px]">Was wir alles bieten</h1>
       </div>
-      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[200px] max-w-[1000px] m-auto">
+      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[180px] max-w-[1000px] m-auto">
         {paketeHosting.map((item: TTable) => (
           <Table item={item} key={item.title} />
         ))}
@@ -45,7 +48,17 @@ const WebHosting = () => {
         </div>
       </div>
       <img src={wavesOne} className="-mx-[6px] absolute" alt="" />
-      <div className=" -mx-[6px] pt-20 md:pt-40 flex items-center justify-center">tes</div>
+      <div className=" -mx-[6px] pt-20 md:pt-40 flex items-center flex-col justify-center">
+        <div className="text-center   font-semibold justify-center items-center pt-8 flex flex-col gap-4">
+          <span className="text-yellow-500 -tracking-tight font-bold uppercase text-[18px]">Entwickelt für Wachstum und Leistung</span>
+          <h1 className="text-[32px]">SCHNELL UND SICHER</h1>
+        </div>
+        <Container sx={{ mt: 10, display: "flex", gap: 4, justifyContent: "center", flexWrap: "wrap" }}>
+          {fituresHosting.map((item: TFitureHosting) => (
+            <FitureHosting item={item} key={item.title} />
+          ))}
+        </Container>
+      </div>
     </section>
   );
 };

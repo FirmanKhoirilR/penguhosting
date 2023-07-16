@@ -4,7 +4,7 @@ import { TTestimonial } from "../types/Types";
 
 const Testimonial = () => {
   return (
-    <div className="w-full bg-black/40 text-white p-4 min-h-[50vh] pt-28">
+    <div className="w-full bg-black/40 text-white p-4 min-h-[50vh] pb-14 pt-28">
       <div className="text-center font-semibold pt-8 flex flex-col gap-4">
         <span className="text-yellow-200 uppercase text-[18px]"> Kundenbewertungen </span>
         <h1 className="text-[32px]">Was unser Kunden sagen</h1>
