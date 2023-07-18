@@ -32,14 +32,14 @@ const SearchDomain = () => {
           value={searchDomain}
           onChange={(e) => setSearchDomain(e.target.value)}
           placeholder="beispiel.com"
-          className="mt-10 placeholder:text-sm placeholder:text-black/70 text-black min-w-[340px] md:min-w-[600px] lg:min-w-[100vh] py-5 outline-none px-4 rounded-l-full"
+          className="mt-10 placeholder:text-sm placeholder:text-black/70 text-black min-w-[340px] md:min-w-[600px] lg:min-w-[100vh] py-3 outline-none px-4 rounded-l-full"
         />
         <button
           type="submit"
           disabled={searchDomain !== "" ? false : true}
           name="buttonSearch"
           aria-label="buttonSearch"
-          className="py-5 font-semibold px-4 bg-gradient-to-r from-sky-300 hover:opacity-90 transition duration-200  rounded-r-full disabled:opacity-70 absolute  bottom-0 to-blue-500"
+          className="py-3 font-semibold px-4 bg-gradient-to-r from-sky-300 hover:opacity-90 transition duration-200  rounded-r-full disabled:opacity-70 absolute  bottom-0 to-blue-500"
         >
           Suchen
         </button>

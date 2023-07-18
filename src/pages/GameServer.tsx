@@ -28,7 +28,7 @@ const GameServer = () => {
 
         <div className="bg-background text-white pt-24 md:pt-52">
           <h1 className="text-center font-bold text-3xl mb-10">In Sekunden schnelle Online!</h1>
-          <div className="flex flex-col gap-4 md:[&>*:nth-child(2)]:flex-row-reverse">
+          <div className="flex flex-col gap-4 ">
             {gameFitureOffer.map((item: TOffer) => (
               <CardFitureOffer item={item} key={item.title} />
             ))}

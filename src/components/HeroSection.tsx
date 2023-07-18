@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div className="flex lg:flex-row  w-full bg-black/30 flex-col items-center justify-evenly py-16 gap-10 md:gap-6">
       <div className="text-center">
-        <h1 className="font-[900] text-yellow-400 uppercase text-[42px] md:text-[52px]">
+        <h1 className="font-[900] text-yellow-400 uppercase tracking-tight text-[42px] md:text-[52px]">
           Blitzschnelle <br /> Einrichtung & <br /> Leistung
         </h1>
         <h3 className="text-[30px] md:text-[36px] font-bold text-white">

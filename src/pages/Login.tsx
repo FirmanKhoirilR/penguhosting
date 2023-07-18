@@ -1,5 +1,13 @@
+import { Container } from "@mui/material";
+
 const Login = () => {
-  return <form action="">Test</form>;
+  return (
+    <div className="bg-white">
+      <Container>
+        <form action="">Test</form>
+      </Container>
+    </div>
+  );
 };
 
 export default Login;

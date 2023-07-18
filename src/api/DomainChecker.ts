@@ -6,9 +6,10 @@ const fetchDomainChecker = async (url: string) => {
 };
 
 export const checkDomain = async (domain: string) => {
+  const checkLowercase = domain.toLocaleLowerCase();
   const dot = /\.(com|de|club|design|io|org|info|biz|net)$/i;
-  const hasDotCom = dot.test(domain);
+  const hasDotCom = dot.test(checkLowercase);
 
-  const res = await fetchDomainChecker(`whois?whois=live&domainName=${hasDotCom ? domain : `${domain}.com`}&apiKey=${import.meta.env.VITE_APP_DOMAIN_CHECKER_API_KEY}`);
+  const res = await fetchDomainChecker(`whois?whois=live&domainName=${hasDotCom ? checkLowercase : `${checkLowercase}.com`}&apiKey=${import.meta.env.VITE_APP_DOMAIN_CHECKER_API_KEY}`);
   return res;
 };

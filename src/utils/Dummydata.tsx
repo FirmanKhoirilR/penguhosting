@@ -107,7 +107,7 @@ export const footerLink = [
       { name: "gameserver", href: "/gameserver" },
       { name: "webhosting", href: "/webhosting" },
       { name: "domains", href: "/domain" },
-      { name: "VPS", href: "/vpn-hosting" },
+      { name: "VPS", href: "/vps-hosting" },
     ],
   },
   {

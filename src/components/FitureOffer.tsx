@@ -10,9 +10,9 @@ const FitureOffer = () => {
         <span className="text-yellow-200 uppercase text-[18px]"> unsere features</span>
         <h1 className="text-[32px]">Was wir alles bieten</h1>
       </div>
-      <div className="flex flex-col gap-4 md:[&>*:nth-child(2)]:flex-row-reverse">
-        {fitureOffer.map((item: TOffer) => (
-          <CardFitureOffer item={item} key={item.title} />
+      <div className="flex flex-col gap-4">
+        {fitureOffer.map((item: TOffer, i: number) => (
+          <CardFitureOffer item={item} i={i} key={item.title} />
         ))}
       </div>
       <div className="flex flex-col py-10">
