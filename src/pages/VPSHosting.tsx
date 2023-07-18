@@ -52,8 +52,8 @@ const VPSHosting = () => {
           <h1 className="text-[32px]">SCHNELL UND SICHER</h1>
         </div>
         <Container sx={{ mt: 10, display: "flex", gap: 4, justifyContent: "center", flexWrap: "wrap" }}>
-          {fituresHosting.map((item: TFitureHosting) => (
-            <FitureHosting item={item} key={item.title} />
+          {fituresHosting.map((item: TFitureHosting, i: number) => (
+            <FitureHosting item={item} key={item.title} i={i} />
           ))}
         </Container>
       </div>

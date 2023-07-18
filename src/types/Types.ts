@@ -27,7 +27,7 @@ export interface IDataDomain {
       email_address: string;
     };
     status: boolean;
-    updated_date: string;
+    update_date: string;
     expiry_date: string;
   };
 }
@@ -38,6 +38,7 @@ export interface IFitureHosting {
     title: string;
     desc: string;
   };
+  i: number;
 }
 export type TFitureHosting = {
   icon: Element | any;
@@ -94,9 +95,10 @@ export type TServer = {
 };
 export type TTable = {
   title: string;
-  wordPress: string;
-  visit: string;
-  price: string;
+  wordPress?: string;
+  visit?: string;
+  only?: boolean;
+  price?: string;
   storage: string;
   cdn: string;
   googleCloud: string | any;
@@ -126,9 +128,9 @@ export type TCardDesc = {
 export interface ITable {
   item: {
     title: string;
-    wordPress: string;
-    visit: string;
-    price: string;
+    wordPress?: string;
+    visit?: string;
+    price?: string;
     storage: string;
     cdn: string;
     googleCloud: string | any;
@@ -137,4 +139,5 @@ export interface ITable {
     ssh: string | any;
     order: string | any;
   };
+  only?: boolean;
 }

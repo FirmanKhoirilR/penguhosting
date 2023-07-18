@@ -24,7 +24,7 @@ const WebHosting = () => {
         <span className="text-yellow-500 uppercase text-[18px]"> unsere features</span>
         <h1 className="text-[32px]">Was wir alles bieten</h1>
       </div>
-      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[180px] max-w-[1000px] m-auto">
+      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[155px] max-w-[1000px] m-auto">
         {paketeHosting.map((item: TTable) => (
           <Table item={item} key={item.title} />
         ))}
@@ -47,15 +47,15 @@ const WebHosting = () => {
           </div>
         </div>
       </div>
-      <img src={wavesOne} className="-mx-[6px] absolute" alt="" />
+      <img src={wavesOne} className="-mx-[6px] absolute" alt="waves blue" />
       <div className=" -mx-[6px] pt-20 md:pt-40 flex items-center flex-col justify-center">
         <div className="text-center   font-semibold justify-center items-center pt-8 flex flex-col gap-4">
           <span className="text-yellow-500 -tracking-tight font-bold uppercase text-[18px]">Entwickelt für Wachstum und Leistung</span>
           <h1 className="text-[32px]">SCHNELL UND SICHER</h1>
         </div>
         <Container sx={{ mt: 10, display: "flex", gap: 4, justifyContent: "center", flexWrap: "wrap" }}>
-          {fituresHosting.map((item: TFitureHosting) => (
-            <FitureHosting item={item} key={item.title} />
+          {fituresHosting.map((item: TFitureHosting, i: number) => (
+            <FitureHosting item={item} key={item.title} i={i} />
           ))}
         </Container>
       </div>

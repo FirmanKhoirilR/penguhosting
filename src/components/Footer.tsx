@@ -23,7 +23,7 @@ const Footer = () => {
               <Typography variant="subtitle2" sx={{ fontWeight: 600, textTransform: "capitalize", fontSize: 20 }} className="text-yellow-500">
                 {item.title}
               </Typography>
-              <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: { md: 1.5, xs: 1 } }}>
                 {item.link.map((lin) => (
                   <Link to={lin.href} className="capitalize hover:text-white/70 transition duration-200 flex flex-col " key={lin.name}>
                     <span className="text-sm">{lin.name}</span>
@@ -34,7 +34,7 @@ const Footer = () => {
           ))}
         </Box>
         <Box className="border-t border-white/60 w-full pt-10 p-4 text-slate-200">
-          <Typography variant="body2">Copyright © 2023 PenguHosting | Kliment Komendantov IT Dienstleistungen</Typography>
+          <Typography sx={{ fontSize: { md: 16, xs: 14 } }}>Copyright © 2023 PenguHosting | Kliment Komendantov IT Dienstleistungen</Typography>
         </Box>
       </Container>
     </div>

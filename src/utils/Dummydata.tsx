@@ -1,11 +1,11 @@
-import { BiWorld, BiServer, BiLogoDiscord } from "react-icons/bi";
+import { BiWorld, BiServer } from "react-icons/bi";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { AiOutlineInstagram, AiFillYoutube, AiOutlineDesktop, AiOutlineTwitter, AiFillCloseCircle } from "react-icons/ai";
 import { Games, Hosting, Vpn, Roket, Hero, Pengu, Samsungpro, amd, Samsungetc, Farming, Valheim, Panel, Penguin } from "../assets";
 import { TiTick } from "react-icons/ti";
 import { SlBasket } from "react-icons/sl";
 import { CgMail } from "react-icons/cg";
-import { BsSpeedometer2, BsGit } from "react-icons/bs";
+import { BsSpeedometer2, BsGit, BsDiscord } from "react-icons/bs";
 import { FaShieldVirus, FaServer, FaPlug } from "react-icons/fa";
 
 export const fituresHosting = [
@@ -98,7 +98,7 @@ export const sosialMedia = [
   { className: "bg-pink-500 hover:bg-pink-600", icon: <AiOutlineInstagram />, name: "instagram", url: "https://www.instagram.com/penguhosting/" },
   { className: "bg-blue-500/80 hover:bg-blue-600", icon: <AiOutlineTwitter />, name: "twitter", url: "https://twitter.com/penguhosting" },
   { className: "bg-red-500 hover:bg-red-600", icon: <AiFillYoutube />, name: "youtube", url: "https://www.youtube.com/channel/UCiwCeWD5sFJS3Od1mLnmueQ" },
-  { className: "bg-blue-600 hover:bg-blue-700", icon: <BiLogoDiscord />, name: "discord", url: "https://discord.gg/rxRhb7msbs" },
+  { className: "bg-blue-600 hover:bg-blue-700", icon: <BsDiscord />, name: "discord", url: "https://discord.gg/rxRhb7msbs" },
   { className: "bg-red-700 hover:bg-red-900", icon: <CgMail />, name: "mail", url: "mailto:kontakt@penguhosting.com" },
 ];
 export const cardHome = [
@@ -134,21 +134,22 @@ export const fitureOffer = [
 ];
 export const gameFitureOffer = [
   {
-    title: "DDos Protection",
-    descriptionOne: "PenguHosting hat Hervorragenden DDos Schutz und davon profitiert auch Ihr!",
-    descriptionTwo: "Unser DDoS-Schutz von Arbor Networks, schützt vor allen Angriffen bis zu 750 GBit/s.",
+    title: "Eigenes Gamepanel für einfache Bedienung",
+    descriptionOne: "Unser Gamepanel wurde für maximale Übersichtlichkeit entwickelt. Egal ob auf ",
+    descriptionTwo: "Desktop oder Mobilgeräten, alle Funktionen zum Hosten eines Game-Servers sind einfach und schnell erreichbar.",
     image: Panel,
   },
   {
-    title: "Hohe Verfügbarkeit",
-    descriptionOne: "Unsere Serverangebote überzeugen durch herausragende Qualität und eine hohe Verfügbarkeit, die durch unseren Proxmox- und CEPH-Cluster gewährleistet wird.",
-    descriptionTwo: "Wir stellen sicher, dass Ihre Server jederzeit erreichbar ist und Ihnen eine zuverlässige Performance bietet. Entscheiden Sie sich für uns und profitieren Sie von unseren erstklassigen Serverlösungen.",
+    title: "Schnelle und zuverlässige Server",
+    descriptionOne:
+      "PenguHosting bietet blitzschnelle Server für ein reibungsloses Multiplayer-Spielerlebnis an. Wir legen großen Wert auf Geschwindigkeit und Zuverlässigkeit, um sicherzustellen, dass Ihre Server jederzeit optimal funktionieren.",
+    descriptionTwo: "Mit uns können Sie sich auf eine unterbrechungsfreie Spielumgebung verlassen.",
     image: Hero,
   },
   {
-    title: "Hervoragender Kundensupport",
-    descriptionOne: "  Unser herausragender Kundensupport steht Ihnen jederzeit zur Verfügung. Sie können uns über verschiedene Kanäle wie WhatsApp,  E-Mail, Ticket-System, Twitter oder unseren Discord-Server erreichen.",
-    descriptionTwo: "Wir sind stets bemüht, Ihre Anliegen schnell und effizient zu bearbeiten. Zögern Sie nicht, uns zu kontaktieren - wir sind für Sie da und helfen Ihnen gerne weiter.",
+    title: "PrePaid System",
+    descriptionOne: "Vermeiden Sie lästige Mahnungen und Zahlungsverzüge, indem Sie unsere Produkte in der Prepaid-Version nutzen. Bei PenguHosting sind alle unsere Produkte auch als Prepaid verfügbar.",
+    descriptionTwo: "Dadurch haben Sie die volle Kontrolle über Ihre Zahlungen und können den Ärger von Mahnungen oder verspäteten Zahlungen vermeiden.",
     image: Penguin,
   },
 ];
@@ -388,7 +389,7 @@ export const vpnHosting = [
 
 export const paketeHosting = [
   {
-    title: "#Pack",
+    title: "Pack",
     price: "Price",
     wordPress: "WordPress installs",
     visit: "Monthly visits",
@@ -438,6 +439,48 @@ export const paketeHosting = [
     backup: "14 Days",
     ssh: <TiTick className="text-[18px] md:text-[21px] text-green-500" />,
     order: <SlBasket className="text-[18px] md:text-[21px] text-black hover:text-yellow-500" />,
+  },
+];
+export const paketeDomainHosting = [
+  {
+    title: "TLD",
+    storage: ".com",
+    cdn: ".net",
+    googleCloud: ".org",
+    support: ".info",
+    backup: ".club",
+    ssh: ".biz",
+    order: "Select",
+  },
+  {
+    title: "Register",
+    storage: "$9.95",
+    cdn: "$9.95",
+    googleCloud: "$9.95",
+    support: "$9.95",
+    backup: "$9.95",
+    ssh: "$9.95",
+    order: <SlBasket className="text-[18px] md:text-[21px] hover:text-yellow-600 text-yellow-500" />,
+  },
+  {
+    title: "Renew",
+    storage: "$9.95",
+    cdn: "$9.95",
+    googleCloud: "$9.95",
+    support: "$9.95",
+    backup: "$9.95",
+    ssh: "$19.95",
+    order: <SlBasket className="text-[18px] md:text-[21px] hover:text-yellow-600 text-yellow-500" />,
+  },
+  {
+    title: "Transfer",
+    storage: "$9.95",
+    cdn: "$9.95",
+    googleCloud: "$9.95",
+    support: "$9.95",
+    backup: "$9.95",
+    ssh: "$29.95",
+    order: <SlBasket className="text-[18px] md:text-[21px] hover:text-yellow-600 text-yellow-500" />,
   },
 ];
 export const vpnPaketeHosting = [

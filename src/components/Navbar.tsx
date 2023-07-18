@@ -27,7 +27,7 @@ const Navbar = () => {
         <Link
           to={"/login"}
           onClick={() => setLinkName("login")}
-          className={` px-5 lg:px-8 hover:bg-blue-600 font-normal tracking-tight transition duration-200 shadow-lg ml-2 lg:ml-5 py-2 text-white flex gap-1 items-center rounded-lg bg-blue-400 `}
+          className={` px-5 lg:px-8 hover:bg-blue-600 font-normal tracking-tight transition duration-200 shadow-lg ml-2 lg:ml-5 py-2 text-white hidden md:flex gap-1 items-center rounded-lg bg-blue-400 `}
         >
           <AiOutlineUserAdd size={20} />
           Login

@@ -12,7 +12,6 @@ export { default as Samsungpro } from "./Samsungpro.png";
 export { default as Samsungetc } from "./samsungetc.png";
 export { default as amd } from "./amd.png";
 export { default as alarm } from "./alarm.webp";
-export { default as abstrak } from "./abstrak.webp";
 export { default as fast } from "./fast.svg";
 export { default as wavesTwo } from "./wavesTwo.svg";
 export { default as wavesOne } from "./wavesOne.svg";

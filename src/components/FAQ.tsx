@@ -6,7 +6,7 @@ const FAQ = () => {
   const { active, setActive }: any = useGlobalContext();
 
   return (
-    <div className="bg-background flex flex-col items-center py-10 text-white">
+    <div className="bg-background flex flex-col px-2 md:px-0 items-center py-24 text-white">
       <div className="text-center font-semibold pt-8 flex flex-col gap-4">
         <span className="text-yellow-400 uppercase text-[18px]">Oft gestelle fragen</span>
         <h1 className="text-[32px]">FAQ</h1>

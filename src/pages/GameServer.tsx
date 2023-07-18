@@ -1,38 +1,67 @@
 import { Container } from "@mui/material";
-import { gameFitureOffer, gameMaster } from "../utils/Dummydata";
-import { CardFitureOffer, CardGame, FAQ, Testimonial } from "../components";
-import { wavesOne, wavesTwo } from "../assets";
-import { TOffer } from "../types/Types";
+import { fituresHosting, gameFitureOffer, gameMaster } from "../utils/Dummydata";
+import { CardFitureOffer, CardGame, FAQ, FitureHosting, Testimonial } from "../components";
+import { wavesOne } from "../assets";
+import { TFitureHosting, TOffer } from "../types/Types";
+import video from "../assets/placeholder.mp4";
+import { FaGamepad } from "react-icons/fa";
 
 const GameServer = () => {
   return (
-    <div className=" text-black ">
-      <div className="bg-background text-white">
-        <div className="text-center py-2 px-1 font-bold">
-          <h1 className="text-[34px] md:text-[46px] text-yellow-500"> Blitzschnelle Einrichtung & Leistung</h1>
-          <span className="text-[20px] md:text-[24px]"> Mit unseren Eiskalten Servern</span>
+    <div id="#" className="scroll-smooth">
+      <div className=" bg-black/40 ">
+        <div className="text-center text-white pt-4 pb-2 px-1 font-bold">
+          <h1 className="text-[34px] md:text-[46px] text-yellow-400 font-extrabold tracking-wide uppercase">gameserver</h1>
+          <span className="text-[20px] md:text-[38px]"> Eiskalt und Blitzschnell</span>
         </div>
-        <Container sx={{ display: "flex", justifyContent: "center", gap: 2, py: 4, flexDirection: { md: "row", xs: "column" }, flexWrap: "wrap" }}>
+        <a type="button" href="#" aria-label="buttonGames" className=" flex items-center justify-center p-3 rounded-full text-white fixed bottom-4 z-10 right-4 hover:bg-sky-300 transition duration-300 bg-sky-400">
+          <FaGamepad size={25} />
+        </a>
+        <Container sx={{ display: "flex", justifyContent: "center", gap: 3, py: 4, my: 4, flexDirection: { md: "row", xs: "column" }, flexWrap: "wrap" }} className="md:[&>*:nth-child(2)]:scale-105 ">
           {gameMaster.map((item) => (
             <CardGame key={item.name} item={item} />
           ))}
         </Container>
-        <img src={wavesOne} alt="waves blue" className="absolute" />
-      </div>
 
-      <div className="bg-slate-100 pt-24 md:pt-52">
-        <div className="flex flex-col gap-4 md:[&>*:nth-child(2)]:flex-row-reverse">
-          {gameFitureOffer.map((item: TOffer) => (
-            <CardFitureOffer item={item} key={item.title} />
-          ))}
+        <div className="bg-background text-white pt-24 md:pt-52">
+          <h1 className="text-center font-bold text-3xl mb-10">In Sekunden schnelle Online!</h1>
+          <div className="flex flex-col gap-4 md:[&>*:nth-child(2)]:flex-row-reverse">
+            {gameFitureOffer.map((item: TOffer) => (
+              <CardFitureOffer item={item} key={item.title} />
+            ))}
+          </div>
+          <img src={wavesOne} alt="waves white" className="absolute" />
         </div>
-        <img src={wavesTwo} alt="waves white" className="absolute" />
-      </div>
-      <div className="bg-purple-900">
+
+        <div className=" flex flex-col pt-36 pb-20 gap-20 items-center text-white">
+          <div className="text-center  font-semibold justify-center items-center pt-8 flex flex-col gap-4">
+            <span className="text-yellow-400 -tracking-tight font-bold uppercase text-[18px]">überzeug dich selbst</span>
+            <h1 className="text-[36px]">Unser Gamepanel</h1>
+          </div>
+          <div className="mx-4">
+            <video controls>
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div className="bg-slate-100 pt-20 pb-0 md:pb-4 ">
+          <div className="text-center   font-semibold justify-center items-center pt-8 flex flex-col gap-4">
+            <span className="text-yellow-500 -tracking-tight font-bold uppercase text-[18px]">Entwickelt für Wachstum und Leistung</span>
+            <h1 className="text-[32px]">SCHNELL UND SICHER</h1>
+          </div>
+          <Container sx={{ mt: 10, display: "flex", gap: 4, pb: 5, justifyContent: "center", flexWrap: "wrap" }}>
+            {fituresHosting.map((item: TFitureHosting, i: number) => (
+              <FitureHosting item={item} key={item.title} i={i} />
+            ))}
+          </Container>
+        </div>
+
+        <FAQ />
+        <img src={wavesOne} alt="waves blue" className="absolute" />
         <Testimonial />
       </div>
-
-      <FAQ />
     </div>
   );
 };

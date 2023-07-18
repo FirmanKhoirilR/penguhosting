@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Domain, GameServer, Home, Login, VPSHosting, WebHosting } from "./pages";
+import { Contact, Domain, GameServer, Home, Login, VPSHosting, WebHosting } from "./pages";
 import { Footer, Navbar, Sidebar } from "./components";
 
 function App() {
   return (
-    <main>
+    <main className="scroll-smooth hero__background">
       <Navbar />
       <Sidebar />
       <Routes>
@@ -15,6 +15,7 @@ function App() {
         <Route path="/webhosting" element={<WebHosting />} />
         <Route path="/domain" element={<Domain />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </main>

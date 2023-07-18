@@ -6,8 +6,8 @@ const fetchDomainChecker = async (url: string) => {
 };
 
 export const checkDomain = async (domain: string) => {
-  const regex = /\.com$/i; // Match ".com" at the end (case-insensitive)
-  const hasDotCom = regex.test(domain);
+  const dot = /\.(com|de|club|design|io|org|info|biz|net)$/i;
+  const hasDotCom = dot.test(domain);
 
   const res = await fetchDomainChecker(`whois?whois=live&domainName=${hasDotCom ? domain : `${domain}.com`}&apiKey=${import.meta.env.VITE_APP_DOMAIN_CHECKER_API_KEY}`);
   return res;

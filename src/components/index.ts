@@ -13,4 +13,5 @@ export { default as OptionDomain } from "./OptionDomain";
 export { default as Error } from "./Error";
 export { default as Loading } from "./Loading";
 export { default as CardGame } from "./CardGame";
+export { default as ModalTaken } from "./ModalTaken";
 export { default as CardFitureOffer } from "./CardFitureOffer";

@@ -10,7 +10,7 @@ const Sidebar = () => {
   return (
     <div
       className={`fixed ${
-        toogleSidebar ? "translate-y-[0%]" : "translate-y-[-100%]"
+        toogleSidebar ? "translate-y-[0%]" : "translate-y-[-120%]"
       } transition duration-700 top-[76px] z-10 flex md:hidden flex-col items-center justify-around min-h-[50vh] w-full bg-white  font-semibold text-black/60 tracking-[0.001em]`}
     >
       {navbarLink.map((link: TLink) => (
