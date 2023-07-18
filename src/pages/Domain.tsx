@@ -3,10 +3,17 @@ import { wavesOne, wavesTwo } from "../assets";
 import { FAQ, FitureHosting, SearchDomain, Table, Testimonial } from "../components";
 import { TFitureHosting, TTable } from "../types/Types";
 import { fituresHosting, paketeDomainHosting } from "../utils/Dummydata";
+import { useEffect, useRef } from "react";
 
 const Domain = () => {
+  const divRef = useRef<HTMLDivElement | any>(null);
+
+  useEffect(() => {
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
-    <div>
+    <div ref={divRef}>
       <SearchDomain />
       <img src={wavesOne} alt="waves blue" className="absolute" />
 
@@ -42,8 +49,9 @@ const Domain = () => {
       <img src={wavesTwo} alt="waves white" className="absolute" />
       <div className="text-center flex gap-10 flex-col font-extrabold pt-20 md:pt-40 pb-10 uppercase  text-white bg-black/30">
         <h1 className="text-[26px] md:text-[46px] transition duration-300 hover:text-yellow-500">werde teil der penguhosting community</h1>
-        <div className="">
+        <div>
           <a
+            target="_blank"
             href="https://discord.gg/rxRhb7msbs"
             className="py-4 px-6 mb-4 rounded-lg bg-gradient-to-r  hover:bg-blue-600 transition duration-300 to-sky-400  from-blue-500 text-[25px] hover:text-white/70 tracking-wide md:text-[26px] shadow-lg"
           >

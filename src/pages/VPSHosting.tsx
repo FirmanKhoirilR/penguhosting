@@ -3,10 +3,16 @@ import { alarm, fast, wavesOne, wavesTwo } from "../assets";
 import { CardPrice, FitureHosting, Table } from "../components";
 import { TCardPrice, TFitureHosting, TTable } from "../types/Types";
 import { fituresHosting, vpnHosting, vpnPaketeHosting } from "../utils/Dummydata";
+import { useRef, useEffect } from "react";
 
 const VPSHosting = () => {
+  const divRef = useRef<HTMLDivElement | any>(null);
+
+  useEffect(() => {
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
   return (
-    <section className="pb-20 pt-10 bg-slate-100 mx-[6px]">
+    <section ref={divRef} className="pb-20 pt-10 bg-slate-100 mx-[6px]">
       <div className="text-center">
         <h1 className=" text-[30px] md:text-[36px] font-extrabold px-2 text-blue-400">Beginnen Sie mit günstigem Hosting von PenguHosting</h1>
         <p className="text-black/70">

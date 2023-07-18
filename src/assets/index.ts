@@ -15,3 +15,4 @@ export { default as alarm } from "./alarm.webp";
 export { default as fast } from "./fast.svg";
 export { default as wavesTwo } from "./wavesTwo.svg";
 export { default as wavesOne } from "./wavesOne.svg";
+export { default as video } from "./placeholder.mp4";

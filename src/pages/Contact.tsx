@@ -3,8 +3,10 @@ import Email from "../assets/email.svg";
 import emailjs from "@emailjs/browser";
 import { wavesOne } from "../assets";
 import AlertReact from "react-popup-alert";
+import { useEffect, useRef } from "react";
 
 const Contact = () => {
+  const divRef = useRef<HTMLDivElement | any>(null);
   const { formEmail, setFormEmail, alert, setAlert, setLoadingEmailSubmit, loadingEmailSubmit } = useGlobalContext();
 
   const handleSubmitEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -51,8 +53,12 @@ const Contact = () => {
     });
   };
 
+  useEffect(() => {
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
-    <div className="w-full ">
+    <div ref={divRef} className="w-full ">
       <div className="fixed right-0 bg-white">
         <AlertReact
           header={`PenguHosting Team`}
@@ -84,7 +90,7 @@ const Contact = () => {
         />
       </div>
       <div className="text-center bg-black/30 h-[40vh] flex flex-col justify-center text-white">
-        <h1 className="font-extrabold text-[30px] md:text-[46px] uppercase text-yellow-500">Über uns</h1>
+        <h1 className="font-extrabold text-[30px] md:text-[46px] uppercase text-yellow-400">Über uns</h1>
         <h2 className="font-semibold text-[24px] md:text-[36px]">Nicht nur Gutes Design sondern auch Leistungstarke Server</h2>
       </div>
 
@@ -123,7 +129,7 @@ const Contact = () => {
                 type="text"
                 value={formEmail.subject}
                 onChange={(e) => setFormEmail({ ...formEmail, subject: e.target.value })}
-                placeholder="Subject Title"
+                placeholder="Subject Email"
                 className="font-normal py-2 px-4 outline-none bg-blue-100 rounded-lg"
               />
             </div>

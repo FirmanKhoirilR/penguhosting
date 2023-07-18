@@ -1,22 +1,25 @@
 import { Container } from "@mui/material";
 import { fituresHosting, gameFitureOffer, gameMaster } from "../utils/Dummydata";
 import { CardFitureOffer, CardGame, FAQ, FitureHosting, Testimonial } from "../components";
-import { wavesOne } from "../assets";
+import { wavesOne, video } from "../assets";
 import { TFitureHosting, TOffer } from "../types/Types";
-import video from "../assets/placeholder.mp4";
-import { FaGamepad } from "react-icons/fa";
+import { useRef, useEffect } from "react";
 
 const GameServer = () => {
+  const divRef = useRef<HTMLDivElement | any>(null);
+
+  useEffect(() => {
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
-    <div id="#" className="scroll-smooth">
+    <div ref={divRef} className="scroll-smooth">
       <div className=" bg-black/40 ">
         <div className="text-center text-white pt-4 pb-2 px-1 font-bold">
           <h1 className="text-[34px] md:text-[46px] text-yellow-400 font-extrabold tracking-wide uppercase">gameserver</h1>
           <span className="text-[20px] md:text-[38px]"> Eiskalt und Blitzschnell</span>
         </div>
-        <a type="button" href="#" aria-label="buttonGames" className=" flex items-center justify-center p-3 rounded-full text-white fixed bottom-4 z-10 right-4 hover:bg-sky-300 transition duration-300 bg-sky-400">
-          <FaGamepad size={25} />
-        </a>
+
         <Container sx={{ display: "flex", justifyContent: "center", gap: 3, py: 4, my: 4, flexDirection: { md: "row", xs: "column" }, flexWrap: "wrap" }} className="md:[&>*:nth-child(2)]:scale-105 ">
           {gameMaster.map((item) => (
             <CardGame key={item.name} item={item} />

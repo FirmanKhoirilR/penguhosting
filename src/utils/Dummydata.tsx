@@ -8,6 +8,56 @@ import { CgMail } from "react-icons/cg";
 import { BsSpeedometer2, BsGit, BsDiscord } from "react-icons/bs";
 import { FaShieldVirus, FaServer, FaPlug } from "react-icons/fa";
 
+export const agbDesc = [
+  {
+    title: "1. Allgemeines",
+    desc: "Kliment Komendantov IT Diensleisatungen (PenguHosting) betreibt unter dem Namen „PenguHosting“ das Internet-Portal mit der URL „https://penguhosting.com“. Es handelt sich um eine Plattform auf der Kunden Serverdienste, darunter auch WebHosting, Gameserver, Voiceserver sowie VPS Server und Domains, anmieten können. Die Kunden können sich kostenlos auf der Webseite registrieren. Für die Registrierung werden Benutzername, E-Mail-Adresse, Rechnungsadresse und Passwort benötigt. Die Dienste von PenguHosting werden nach einem PrePaid oder Vertrags System gebucht. Die Kunden haben mit der Registrierung die Möglichkeit ein Kundenkonto mit Währung „EURO“ aufzuladen. Dazu ist es auch möglich Produkte mittels eines Vertrages abzuschließen. Die allgemeinen Geschäftsbedingungen („AGB“) regeln das Vertragsverhältnis zwischen PenguHosting und den Kunden, welche die Serverdienste nutzen.",
+  },
+  {
+    title: "2. Leistungen",
+    desc: "PenguHosting bietet seinen Kunden die Möglichkeit, nach einem PrePaid System oder einem Vetrag für eine bestimmte Laufzeit vorhandene Produkte anzumieten. Der Kunde kann die Laufzeit des Produktes selbst bestimmen und beliebig verlängern. Eine Verkürzung der durch den Kunden angemieteten Laufzeit bzw. eine vorzeitige Kündigung der gemieteten Dienste ist möglich. Bei einer vorzeitigen Kündigung durch den Kunden ist PenguHosting berechtigt 50% der Gebühren für die Restlaufzeit des Vertrages als Bearbeitungsgebühr zu erheben. Die Buchung eines Produktes von PenguHosting setzt eine Registrierung als Kunde voraus. Die Registrierung selbst ist kostenlos. PenguHosting kann die Registrierung eines Kunden jederzeit ohne Angaben von Gründen ablehnen. Für die Registrierung muss der Kunde das Registrierungsformular ausfüllen. Für die Registrierung werden Benutzername, E-Mail-Adresse, Adresse, Stadt, Postleitzahl, Land, Telefonnummer und Passwort benötigt. Die Dienste dürfen nur zu den von PenguHosting vorgegebenen Zwecken genutzt werden. Es ist untersagt, gesetzeswidrige oder urheberrechtlich geschützte Inhalte auf den zur Verfügung gestellten Produkten zu speichern oder zu verbreiten. Durch technische Störungen wie z.B. Unterbrechung der Telekommunikation, Stromversorgung, Hard- und Softwarefehler können sich zeitweilige Beschränkungen ergeben. Eine Erstattung für solch einen Ausfall ist möglich; Erstattungsart legt PenguHosting fest.",
+  },
+  {
+    title: "3. Vertragsschluss, Preisangebot, Zahlungsbedingungen",
+    desc: "Die von PenguHosting aufgeführten Leistungen und die Bestellmöglichkeiten stellen lediglich eine Aufforderung an den Kunden dar ein Angebot abzugeben. Ein verbindlicher Vertrag zwischen PenguHosting und dem Kunden kommt erst durch Annahme von beiden Parteien zustande. Die Bezahlung und Abrechnung der Dienste erfolgt ausschließlich über das eingerichtete Kundenkonto. Mit der Buchung eines Produktes erkennt der Kunde die aktuellen Preise für den Dienst an und ermächtigt PenguHosting zur Abbuchung der Gebühren von seinem Kundenkonto oder seinem gewähltem Zahlungsdienstleister. Bei einzelnen Produkten wie VPS Server, Anwendungen, WebHosting, Gameserver oder Domains können die Preise der Marktwirtschaft angepasst werden. Aus diesem Grund können die Preise sich ändern. Eine schriftliche Empfangsbestätigung wird von PenguHosting erstellt. Der Kunde hat jederzeit die Möglichkeit, einen Ausdruck seines Kundenkontos zu erstellen. Aufgrund der Gesetzesgrundlage des GwG (Geldwäschegesetz) und AGB einiger Zahlungsdienstleister kann vorhandenes Guthaben nicht ausbezahlt werden. Das Guthaben verbleibt ohne Ablaufdatum auf dem Kundenkonto.",
+  },
+  {
+    title: "4. Vorschriften für die Registrierung",
+    desc: "Kunde mit unbeschränkter Nutzungsmöglichkeit kann nur jede unbeschränkt geschäftsfähige, natürliche Person, Personengesellschaft oder eine juristische Person werden. Minderjährige Kunden ab dem 14. Lebensjahr erhalten eine beschränkte Nutzungsmöglichkeit. Mit der Registrierung versichern die minderjährigen Kunden, dass eine Einwilligung der Erziehungsberechtigten für die Nutzung der Dienste von PenguHosting vorliegt. PenguHosting ist jederzeit berechtigt, eine schriftliche Einwilligung der Erziehungsberechtigten anzufordern. Für die Einhaltung des Jugendschutzes behält sich PenguHosting die Durchführung eines Altersverifikationsverfahrens vor. Die Altersverifikation kann automatisiert auf Grundlage der durch den Kunden angegebenen Daten erfolgen. PenguHosting ist jederzeit berechtigt, einen geeigneten Nachweis zur Altersverifikation anzufragen. Der Kunde hat die persönlichen Daten im Registrierungsformular vollständig und korrekt anzugeben. Eine Registrierung mit unzutreffenden Angaben ist untersagt. PenguHosting ist jederzeit berechtigt, bei unzutreffenden Angaben den Vertrag anzufechten und vorzeitig zu beenden. Im Falle einer Beendigung des Vertrages durch PenguHosting erfolgt keine Erstattung der bereits gezahlten Gebühren. Der Kontostand aus dem Kundenkonto wird eingezogen und nicht ausbezahlt. Jeder Kunde kann von PenguHosting bei Vorliegen eines wichtigen Grundes, z.B. gesetzeswidriger Verstoß oder Verletzung der ABG, gesperrt werden. Im Falle einer Sperrung durch PenguHosting erfolgt keine Erstattung der bereits gezahlten Gebühren. Der Kontostand aus dem Kundenkonto wird eingezogen und nicht ausbezahlt.",
+  },
+  {
+    title: "5. Einrichtung / Führung des Kundenkontos",
+    desc: "Die Kunden führen bei PenguHosting ein Kundenkonto in der Währung „EURO (€)“. Das Kundenkonto kann mit den angebotenen Zahlungsmitteln (z.B. PayPal, Sofort, Paysafecard, Klarna, Amazon Pay oder Kreditkarte) aufgeladen werden. Die Veträge können mit den gleichen Zahlungsmittel abgeschlossen werden. Geldzahlungen werden nur in der Währung „EURO“ akzeptiert. Die Zahlungen in „EURO“ werden auf dem Kundenkonto nach Abzug eventueller Gebühren von Drittanbietern dem Kundenkonto gutgeschrieben. Bei Auflösung des Kundenkontos werden eventuell angefallene und ausgewiesene Gebühren von dem aktuellen Guthaben in Abzug gebracht. Eine Überziehung des Kundenkontos ist nicht möglich. Die einbezahlten Beträge im Kundenkonto können ausschließlich nur für die von PenguHosting angebotenen Dienste verwendet werden. Das Kundenkonto kann ohne Angaben von Gründen und nach freiem Ermessen von PenguHosting deaktiviert oder gelöscht werden, z.B wenn der letzte Login des Kunden ein Zeitraum von mehr als einem Jahr aufweist.",
+  },
+  {
+    title: "6. Kündigung des Kundenkontos",
+    desc: "Der Kunde kann sein Kundenkonto jederzeit zum Ende der Laufzeit der von ihm gebuchten Dienste kündigen. PenguHosting kann das Kundenkonto ohne Angaben von Gründen ordentlich mit einer Frist von einem Monat zum Ende der Laufzeit der gebuchten Dienste kündigen. Mit einer Sperrung oder Löschung des Kundenkontos werden auch die gebuchten Dienste beendet und entfernt. Eine Reaktivierung des Kundenkontos ist nach der Löschung nicht möglich. Die eingezahlten Beträge auf das Kundenkonto werden dabei nicht ausgezahlt.",
+  },
+  {
+    title: "7. Widerrufsrecht",
+    desc: "Bestellungen durch Privatperson: Die Vertragserklärung kann von einem Kunden innerhalb von zwei Wochen ohne Angabe von Gründen in Textform, darunter auch Brief, Telefax, E-Mail oder über das Kontaktformular, widerrufen werden. Die Frist beginnt frühestens mit Erhalt einer ausführlichen Belehrung über das Widerrufsrecht in Textform. Zur Wahrung der Frist genügt die rechtzeitige Absendung des Widerrufs. Kontaktmöglichkeiten für ein Widerruf Bestellungen durch Unternehmer: Hat ein Kunde in seiner gewerblichen oder selbstständigen beruflichen Tätigkeit gehandelt besteht kein Widerruf. Folgen des Widerrufs: Im Falle eines wirksamen Widerrufs sind die beiderseits empfangenen Leistungen zurück zu gewähren und ggf. gezogene Nutzungen herauszugeben. Hat der Kunde verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen soll, sohat der Kunde einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem PenguHosting von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht. Kann die empfangene Leistung ganz oder teilweise nicht oder nur in verschlechtertem Zustand zurückgewährt werden, muss insoweit Wertersatz an PenguHosting geleistet werden. Das Widerrufsrecht entfällt, sobald PenguHosting die gebuchten Dienste bereits erbracht, für den Kunden eingerichtet und zur Verfügung gestellt hat.",
+  },
+  {
+    title: "8. Haftung",
+    desc: "PenguHosting haftet dem Kunden gegenüber nach den gesetzlichen Bestimmungen für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung von PenguHosting beruhen sowie für sonstige Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung sowie Arglist beruhen. Darüber hinaus haftet PenguHosting für Schäden nach zwingenden gesetzlichen Vorschriften sowie im Fall der Übernahme von Garantien. Soweit nicht einer der vorbezeichneten Fälle vorliegt, haftet PenguHosting für leichte Fahrlässigkeit nur, wenn deren gesetzliche Vertreter, leitende Angestellte oder sonstige Erfüllungsgehilfen eine wesentliche Vertragspflicht verletzen. In diesen Fällen ist die Haftung auf typische und vorhersehbare Schäden begrenzt. In allen anderen Fällen haftet PenguHosting nicht für leichte Fahrlässigkeit. PenguHosting haftet nicht für mittelbare bzw. Folgeschäden. PenguHosting übernimmt keine Haftung für Eingabe-, Übertragungs- und / oder Auswertungsfehler, da diese außerhalb des Einflussbereichs von PenguHosting liegen. Der Kunde ist für Inhalte, die der Kunde ins Internet stellt, selbst verantwortlich und haftet für eventuelle Rechtsverstöße. PenguHosting übernimmt für die Inhalte des Kunden keine Haftung. Bei Erlangen von Kenntnis werden alle bei PenguHosting angemieteten Dienste sofort gesperrt. PenguHosting hat das Recht offensichtliche Fehler, insbesondere bei der Angabe von Informationen und Preisen auch nachträglich zu berichtigen. Ein Schadensersatzanspruch des Kunden ist in diesen Fällen ausgeschlossen. Gemäß §280 BGB ist PenguHosting nicht für Ausfallzeiten verantwortlich die nicht im Einflussbereich von PenguHosting liegen (höhere Gewalt, Verschulden Dritter, etc.).",
+  },
+  {
+    title: "9. Änderungen der AGB",
+    desc: "PenguHosting ist berechtigt, den Inhalt dieser AGB mit Zustimmung des Kunden jederzeit zu ändern, sofern die Änderung unter Berücksichtigung der Interessen der PenguHosting für den Kunden zumutbar ist. Die Zustimmung zur Änderung gilt als erteilt, sofern der Kunde der Änderung nicht binnen vier Wochen nach Zugang der Änderungsmitteilung widerspricht. PenguHosting verpflichtet sich, den Kunden mit der Änderungsmitteilung auf die Folgen eines unterlassenen Widerspruchs hinzuweisen. Widerspricht der Kunde innerhalb dieser Frist, ist PenguHosting berechtigt, das Vertragsverhältnis unter Einhaltung der Frist zu beenden und dessen Kundenkonto zu sperren.",
+  },
+  {
+    title: "10. Missbrauchsverbot",
+    desc: "Missbräuchliche Verhaltensweisen auf der Plattform von PenguHosting oder den von PenguHosting betriebenen Diensten ist untersagt. Missbrauch liegt vor, wenn der Kunde: absichtlich fehlerhafte, irreführende oder unvollständige Angaben macht, unberechtigt ein Kundenkonto bei PenguHosting eröffnet, betrügt oder versucht zu betrügen (z.B. wenn der Kunde Mechanismen, Software oder sonstige Scripts in Verbindung mit der Nutzung der Plattform von PenguHosting oder den von PenguHosting betriebenen Diensten verwendet) absichtlich eine Störung oder eine Fehlfunktion herbeigeführt hat die zur Verfügung gestellten Dienste manipuliert sonstige sich aus gesetzlichen Bestimmungen, den AGB der PenguHosting sowie deren allgemeinen Verhaltensregel ergebenden Pflichten und / oder Rechte anderer verletzt.",
+  },
+  {
+    title: "11. Shared Hosting Dienstleistungen",
+    desc: "Bei hoher Auslastung des Netzwerkes, der CPU Ressourcen oder der Schreib und Lesegeschwindigkeiten des Speichers behält sich PenguHosting vor Shared Hosting Dienstleistungen unangekündigt zu sperren. Bei überdurchschnittlicher Nutzung des Fair-Use Traffics behält sich PenguHosting vor die jeweiligen gemieteten Dienstleistungen zu sperren. Die Summe des Fair-Use Traffics wird durch den gesamten Traffic-Kontingenten der jeweiligen Dienstleistung geteilt und durch die Anzahl der jeweiligen vermieteten Dienstleistung ermittelt. Das beabsichtigtee Sabotieren der Funktionsweise und Qualität von Shared Hosting Dienstleistungen führt zur sofortigen Sperrung des Kunden Kontos und allen gemieteten Dienstleistungen. Eine Sperrung nach AGB Punkt 12 führt zur Archivierung von Logs und der Erstellung eines firmeninternen Berichtes.",
+  },
+  {
+    title: "12. Sonstige Bestimmungen",
+    desc: "In diesen allgemeinen Geschäftsbedingungen (AGB) findet ausschließlich das deutsche Recht Anwendung. Gerichtsstand für alle Ansprüche auf Grund dieses Vertragsverhältnisses sowie sämtliche zwischen den Parteien sich ergebende Streitigkeiten über das Zustandekommen, die Abwicklung oder die Beendigung des Vertragsverhältnisses ist, soweit der Kunde Kaufmann ist oder keinen allgemeinen Gerichtsstand in Deutschland hat, in Karlsruhe (Baden-Württemberg). Sollte eine Bestimmung der Geschäftsbedingungen ganz oder teilweise rechtsunwirksam sein oder werden, so wird die Gültigkeit der übrigen Bestimmungen dadurch nicht berührt. Ist eine Bestimmung ungültig, tritt an deren Stelle die gesetzlich zulässige Regelung. Als Vertragssprache steht ausschließlich Deutsch und Englisch zur Verfügung.",
+  },
+];
 export const fituresHosting = [
   {
     icon: <FaShieldVirus size={30} />,
@@ -73,15 +123,15 @@ export const footerLink = [
   {
     title: "infrastruktur",
     link: [
-      { name: "status", href: "/gameserver" },
-      { name: "smokeping", href: "/gameserver" },
+      { name: "status", href: "/ueber-uns" },
+      { name: "smokeping", href: "/ueber-uns" },
     ],
   },
   {
     title: "Rechtliches",
     link: [
       { name: "impressum", href: "/impressum" },
-      { name: "AGB", href: "/webhosting" },
+      { name: "AGB", href: "/agb" },
       { name: "Datenschutz", href: "/datenschutz" },
       { name: "kontakt", href: "/contact" },
     ],

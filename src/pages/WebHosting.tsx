@@ -3,10 +3,16 @@ import { TCardPrice, TFitureHosting, TTable } from "../types/Types";
 import { fituresHosting, paketeHosting, webHosting } from "../utils/Dummydata";
 import { alarm, fast, wavesTwo, wavesOne } from "../assets";
 import { Container } from "@mui/material";
+import { useRef, useEffect } from "react";
 
 const WebHosting = () => {
+  const divRef = useRef<HTMLDivElement | any>(null);
+
+  useEffect(() => {
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
   return (
-    <section className="pb-20 bg-slate-100 mx-[6px]">
+    <section ref={divRef} className="pb-20 bg-slate-100 mx-[6px]">
       <SearchDomain />
       <img src={wavesOne} alt="waves blue" className="absolute mx-[-6px]" />
       <div className="text-center mt-20 md:mt-48">

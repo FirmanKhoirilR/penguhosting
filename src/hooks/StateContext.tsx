@@ -14,6 +14,12 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     subject: "",
     message: "",
   });
+  const [formLogin, setFormLogin] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
   const [alert, setAlert] = useState({
     type: "error",
     text: "",
@@ -22,7 +28,26 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
 
   return (
     <StateContext.Provider
-      value={{ toogleSidebar, loadingEmailSubmit, alert, setAlert, setLoadingEmailSubmit, setToogleSidebar, modelDomain, setModelDomain, searchDomain, setSearchDomain, active, formEmail, setFormEmail, setActive, linkName, setLinkName }}
+      value={{
+        toogleSidebar,
+        loadingEmailSubmit,
+        formLogin,
+        setFormLogin,
+        alert,
+        setAlert,
+        setLoadingEmailSubmit,
+        setToogleSidebar,
+        modelDomain,
+        setModelDomain,
+        searchDomain,
+        setSearchDomain,
+        active,
+        formEmail,
+        setFormEmail,
+        setActive,
+        linkName,
+        setLinkName,
+      }}
     >
       {children}
     </StateContext.Provider>
