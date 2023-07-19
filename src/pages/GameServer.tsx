@@ -20,7 +20,7 @@ const GameServer = () => {
           <span className="text-[20px] md:text-[38px]"> Eiskalt und Blitzschnell</span>
         </div>
 
-        <Container sx={{ display: "flex", justifyContent: "center", gap: 3, py: 4, my: 4, flexDirection: { md: "row", xs: "column" }, flexWrap: "wrap" }} className="md:[&>*:nth-child(2)]:scale-105 ">
+        <Container sx={{ display: "flex", justifyContent: "center", gap: 3, py: 4, my: 4, flexDirection: { md: "row", xs: "column" }, flexWrap: "wrap", alignItems: "center" }} className="md:[&>*:nth-child(2)]:scale-105 ">
           {gameMaster.map((item) => (
             <CardGame key={item.name} item={item} />
           ))}

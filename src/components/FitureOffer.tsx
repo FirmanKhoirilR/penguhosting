@@ -22,12 +22,12 @@ const FitureOffer = () => {
         </div>
         <div className="flex flex-col gap-3 md:gap-5 md:flex-row mx-4 justify-center items-center mt-20">
           {server.map((item: TServer) => (
-            <div key={item.title} className="flex w-full  md:w-[300px] px-6 md:px-4 py-4 rounded-lg min-h-[350px] md:min-h-[430px] gap-2 flex-col items-center md:items-start justify-start  font-bold h-auto">
-              <img src={item.image} alt={item.title} className="w-[150px] h-[150px]" />
+            <div key={item.title} className="flex w-full  md:w-[300px] px-6 md:px-4 py-4 rounded-lg min-h-[320px] md:min-h-[430px] gap-2 flex-col items-center md:items-start justify-start  font-bold h-auto">
+              <img src={item.image} loading="lazy" alt={item.title} className="w-[150px] h-[150px]" />
               <div className="flex text-center md:text-start flex-col gap-2">
                 <h1 className="text-[22px] md:text-[26px]">
                   {item.title}
-                  <span className="text-blue-400"> {item.titleblue}</span>
+                  <span className="text-blue-500"> {item.titleblue}</span>
                 </h1>
                 <p className=" text-white/70 text-[12px] md:text-sm">{item.description}</p>
               </div>

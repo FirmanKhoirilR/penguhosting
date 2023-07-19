@@ -25,14 +25,32 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     text: "",
     show: false,
   });
+  const [user, setUser] = useState(null);
+
+  const [formCreateBlog, setFormCreateBlog] = useState({
+    title: "",
+    about: "",
+    description: "",
+    loading: false,
+    date: new Date(),
+    imageAsset: null,
+  });
+
+  const [wrongImageType, setWrongImageType] = useState(false);
 
   return (
     <StateContext.Provider
       value={{
         toogleSidebar,
+        formCreateBlog,
+        setFormCreateBlog,
+        wrongImageType,
+        setWrongImageType,
         loadingEmailSubmit,
         formLogin,
         setFormLogin,
+        user,
+        setUser,
         alert,
         setAlert,
         setLoadingEmailSubmit,

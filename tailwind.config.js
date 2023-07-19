@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        background: "#003366",
+        background: "#1e3a8a",
       },
       fontWeight: {
         semibold: 600,

@@ -9,3 +9,5 @@ export { default as AGB } from "./AGB";
 export { default as Impressium } from "./Impressium";
 export { default as Datenschutz } from "./Datenschutz";
 export { default as About } from "./About";
+export { default as Blog } from "./Blog";
+export { default as CreateBlog } from "./CreateBlog";

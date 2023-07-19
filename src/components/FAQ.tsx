@@ -13,7 +13,7 @@ const FAQ = () => {
       </div>
       <div className="faq mt-14 mb-10 flex flex-col gap-2 ">
         {Faq.map((item, i: number) => (
-          <div onClick={() => setActive(i)} onDoubleClickCapture={() => setActive(null)} className="max-w-[1000px] p-2 flex flex-col cursor-pointer gap-4 pb-1 border-b border-blue-500/70" key={item.answer}>
+          <div onClick={() => setActive(i)} onDoubleClickCapture={() => setActive(null)} className="max-w-[1000px] p-2 flex flex-col cursor-pointer gap-4 pb-1 border-b border-blue-300/70" key={item.answer}>
             <div className="flex justify-between items-center">
               <h3 className="text-[1rem] md:text-[1.2rem] font-semibold">{item.question}</h3>
               {active === i ? <AiOutlineMinus size={24} /> : <AiOutlinePlus size={24} />}

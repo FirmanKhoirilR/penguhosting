@@ -8,6 +8,50 @@ export type TCardPrice = {
   description: string;
 };
 
+export type TBlog = {
+  _id: string;
+  title: string;
+  description: string;
+  createdAt: Date | string;
+  image: {
+    asset: {
+      url: string;
+    };
+  };
+  save: boolean | any;
+  postedBy: {
+    _id: string;
+    image: string;
+    userName: string;
+  };
+};
+export interface IBlog {
+  item: {
+    _id: string;
+    title: string;
+    description: string;
+    createdAt: Date | string;
+    image: {
+      asset: {
+        url: string;
+      };
+    };
+    save: boolean | any;
+    postedBy: {
+      _id: string;
+      image: string;
+      userName: string;
+    };
+  };
+}
+
+export interface IUser {
+  name?: string | null;
+  email: string;
+  picture: string;
+  sub: number;
+}
+
 export interface IDataDomain {
   item: {
     create_date: string;
