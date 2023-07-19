@@ -3,6 +3,7 @@ import { IBlog } from "../types/Types";
 import { FcCalendar } from "react-icons/fc";
 import { urlFor } from "../client";
 import { AiOutlineDownload } from "react-icons/ai";
+import { Pengu } from "../assets";
 
 const CardBlog = ({ item }: IBlog) => {
   return (
@@ -13,12 +14,12 @@ const CardBlog = ({ item }: IBlog) => {
       </a>
       <div className="flex py-2 items-center gap-2 md:gap-6 justify-between">
         <div className="py-2 flex items-center gap-2">
-          <img src={item?.postedBy?.image} alt={item?.postedBy?.userName} loading="lazy" className="w-8 h-8 rounded-full" />
-          <h1 className="capitalize text-[12px] md:text-base font-semibold ">{item?.postedBy?.userName}</h1>
+          <img src={item?.postedBy?.image || Pengu} alt={item?.postedBy?.userName || "Klimentz"} loading="lazy" className="w-8 h-8 rounded-full" />
+          <h1 className="capitalize text-[14px] md:text-base font-semibold ">{item?.postedBy?.userName || "Klimentz"}</h1>
         </div>
         <div className="my-2 flex items-center gap-2">
           <FcCalendar size={20} />
-          <p className="text-sm font-semibold text-black/70">{moment(item?.createdAt).format("LLL")}</p>
+          <p className="text-sm font-semibold text-black/70">{moment(item?.createdAt).format("LL")}</p>
         </div>
       </div>
       <div className="font-semibold flex flex-col gap-3">

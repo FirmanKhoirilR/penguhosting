@@ -17,6 +17,7 @@ export default {
       title: 'CreatedAt',
       name: 'createdAt',
       type: 'date',
+      readonly: true,
     },
     {
       name: 'category',

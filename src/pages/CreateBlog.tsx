@@ -1,6 +1,6 @@
 import { useGlobalContext } from "../hooks/StateContext";
 import { Loading } from "../components";
-import { AiOutlineCloudUpload, AiTwotoneDelete } from "react-icons/ai";
+import { AiOutlineCloudUpload, AiOutlineUserAdd, AiTwotoneDelete } from "react-icons/ai";
 import { client } from "../client";
 import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "react-query";
@@ -53,6 +53,8 @@ const CreateBlog = () => {
   }
 
   const dates = formatDate();
+  const users: any = localStorage.getItem("user");
+  const parseUser = JSON.parse(users);
 
   const saveBlog = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -83,9 +85,9 @@ const CreateBlog = () => {
     <form onSubmit={saveBlog} className="bg-white items-center md:flex-row flex-col-reverse justify-around py-10 flex gap-2">
       <div>
         <div className="bg-slate-100 w-full rounded-lg h-[300px] justify-center flex flex-col items-center gap-10">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col  items-center">
             {formCreateBlog.loading && <Loading />}
-            {wrongImageType && <div className="text-red-500 tracking-wide font-semib">Wrong image type</div>}
+            {wrongImageType && <div className="text-red-500 tracking-wide font-semibold">Wrong image type</div>}
             {!formCreateBlog.imageAsset ? (
               <label>
                 <div className="flex flex-col px-4 items-center">
@@ -101,7 +103,7 @@ const CreateBlog = () => {
               </label>
             ) : (
               <div className="relative h-full">
-                <img src={formCreateBlog.imageAsset?.url} loading="lazy" alt="background" className="w-full rounded-lg h-full" />
+                <img src={formCreateBlog.imageAsset?.url} loading="lazy" alt="background" className="w-full  rounded-lg h-[300px]" />
                 <button
                   type="button"
                   name="buttonDelete"
@@ -115,7 +117,7 @@ const CreateBlog = () => {
             )}
           </div>
         </div>
-        <div className="flex flex-col gap-2 min-w-[350px]  max-w-[700px]">
+        <div className="flex flex-col gap-2 mt-4 min-w-[350px]  max-w-[700px]">
           <div className="flex flex-col font-semibold gap-3">
             <label className="text-sm text-black/70">Title</label>
             <input
@@ -127,12 +129,22 @@ const CreateBlog = () => {
               className="font-normal py-2 px-4 outline-none bg-blue-100 rounded-lg"
             />
           </div>
-          {user && (
-            <div className="w-[300px] my-2 flex items-center rounded-xl gap-2 bg-blue-100 p-1">
-              <img src={user?.image} alt={user?.userName} loading="lazy" width={35} height={35} className="rounded-full" />
-              <p className="font-semibold">{user.userName}</p>
-            </div>
-          )}
+
+          <div className="w-[450px] my-2 flex items-center rounded-xl gap-2 bg-blue-100 p-1">
+            {user && (
+              <>
+                <img loading="lazy" src={user?.image} alt={user?.userName} height={40} width={40} className="rounded-full" />
+                <p className="font-semibold">{user.userName}</p>
+              </>
+            )}
+            {users && (
+              <>
+                <img loading="lazy" src={parseUser?.picture} alt={parseUser?.name} height={40} width={40} className="rounded-full" />
+                <p className="font-semibold">{parseUser.name}</p>
+              </>
+            )}
+          </div>
+
           <div className="flex flex-col font-semibold gap-3">
             <label className="text-sm text-black/70">Description</label>
             <textarea
@@ -149,9 +161,12 @@ const CreateBlog = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-1 md:gap-2">
+      <div className="flex flex-col relative items-center gap-1 md:gap-2">
         <h1 className="text-sky-500 font-bold tracking-tight select-none text-[40px]">Post Article</h1>
         <img src={blog} alt="adding Blog" className="w-[300px] md:w-[500px] h-[350px]" />
+        <div className="p-3 bg-sky-500 text-white rounded-full rotate-[20deg] absolute f;ex items-center  -right-5 top-20 md:right-2">
+          <AiOutlineUserAdd size={20} />
+        </div>
       </div>
     </form>
   );

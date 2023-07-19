@@ -38,7 +38,7 @@ const Navbar = () => {
         ))}
         {users || parseUser ? (
           <Link to={`/`}>
-            <img loading="lazy" src={user?.image} alt={user?.userName} height={40} width={40} className="rounded-full" />
+            <img loading="lazy" src={user?.image || parseUser?.picture} alt={user?.userName || parseUser?.name} height={40} width={40} className="rounded-full" />
           </Link>
         ) : (
           <Link

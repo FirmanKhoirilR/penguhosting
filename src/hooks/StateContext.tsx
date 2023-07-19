@@ -14,9 +14,15 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     subject: "",
     message: "",
   });
+  const [isSignup, setIsSignup] = useState(false);
+
   const [formLogin, setFormLogin] = useState({
-    name: "",
+    userName: "",
+    image: "",
+    _id: "",
     email: "",
+    phone: "",
+    imageAsset: null,
     password: "",
     confirmPassword: "",
   });
@@ -25,6 +31,7 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     text: "",
     show: false,
   });
+
   const [user, setUser] = useState(null);
 
   const [formCreateBlog, setFormCreateBlog] = useState({
@@ -36,12 +43,17 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     imageAsset: null,
   });
 
+  const [wrongImageLogin, setWrongImageLogin] = useState(false);
   const [wrongImageType, setWrongImageType] = useState(false);
 
   return (
     <StateContext.Provider
       value={{
         toogleSidebar,
+        wrongImageLogin,
+        setWrongImageLogin,
+        isSignup,
+        setIsSignup,
         formCreateBlog,
         setFormCreateBlog,
         wrongImageType,

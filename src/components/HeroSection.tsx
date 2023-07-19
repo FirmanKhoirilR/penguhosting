@@ -16,15 +16,15 @@ const HeroSection = () => {
         </h3>
       </div>
       <div className="flex flex-col">
-        <div className="flex items-center flex-wrap md:[&>*:nth-child(2)]:scale-110 justify-center md:flex-row p-2 flex-col mt-4 gap-5">
+        <div className="flex items-center flex-wrap xl:[&>*:nth-child(2)]:scale-125 justify-center md:flex-row p-2 flex-col mt-2 md:mt-4 gap-4 md:gap-[44px]">
           {cardHome.map((item: TCard) => (
             <CardGame item={item} key={item.name} />
           ))}
         </div>
-        <div className="mt-10 flex px-1 text-white  justify-center md:justify-start gap-4 items-center">
+        <div className="mt-8 md:mt-14 flex px-1 text-white  justify-center gap-4 items-center">
           <h1 className="text-yellow-400 text-sm md:text-xl font-bold">Sosial Media</h1>
           <AiOutlineArrowRight size={20} />
-          <div className="flex items-center gap-2" id="#">
+          <div className="flex items-center gap-1.5 md:gap-2" id="#">
             {sosialMedia.map((item, i: number) => (
               <motion.a target="_blank" whileInView={{ scale: [0, 1] }} transition={{ delay: i * 0.5, duration: 0.6 }} href={item.url} className={`p-2 rounded-full  text-[28px] ${item.className}`} key={item.name}>
                 {item.icon}

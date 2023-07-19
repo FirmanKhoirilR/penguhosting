@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../hooks/StateContext";
-import Email from "../assets/email.svg";
+import Email from "../assets/email.webp";
 import emailjs from "@emailjs/browser";
 import { wavesOne } from "../assets";
 import AlertReact from "react-popup-alert";
@@ -148,8 +148,8 @@ const Contact = () => {
               {loadingEmailSubmit ? "Sending..." : "Send"}
             </button>
           </div>
-          <div className="hidden md:flex justify-center w-[50%]">
-            <img src={Email} alt="Email" height={300} width={250} />
+          <div className="hidden md:flex justify-center h-[500px] items-center w-[50%]">
+            <img src={Email} alt="Email" height={200} width={350} />
           </div>
         </form>
       </div>

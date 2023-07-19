@@ -27,8 +27,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-popup-alert": "^2.0.0",
     "react-query": "^3.39.3",
-    "tailwind-scrollbar": "^3.0.4",
-    "uuid": "^9.0.0"
+    "tailwind-scrollbar": "^3.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

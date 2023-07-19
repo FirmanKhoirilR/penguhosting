@@ -6,6 +6,7 @@ import { TBlog } from "../types/Types";
 import { Link } from "react-router-dom";
 import { IoMdCreate } from "react-icons/io";
 import { useQuery } from "react-query";
+import { useEffect, useRef } from "react";
 
 const Blog = () => {
   const { data, isLoading, isFetching, isSuccess } = useQuery("blogQuery", () => client.fetch(feedQuery), {
@@ -14,8 +15,13 @@ const Blog = () => {
     refetchInterval: 3000,
   });
 
+  const divRef = useRef<HTMLDivElement | any>(null);
+
+  useEffect(() => {
+    divRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
   return (
-    <div className="bg-white py-10">
+    <div ref={divRef} className="bg-white py-10">
       <Container>
         <div className="flex items-center justify-between">
           <h1 className="text-[56px] font-bold mb-10 border-b-8 border-yellow-500 w-[48px]">Blog</h1>
