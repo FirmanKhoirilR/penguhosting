@@ -419,7 +419,7 @@ export const vpnHosting = [
     title: "Business",
     price: "29,99 ",
     diskon: "40%",
-    normalPrice: "45,99",
+    normalPrice: "€45,99",
     description: "Für Große Websiten oder Unternhmen.",
     desc: [
       {

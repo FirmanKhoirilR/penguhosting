@@ -58,8 +58,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <div ref={divRef} className="w-full ">
-      <div className="fixed right-0 bg-white">
+    <div ref={divRef} className="w-full h-full">
+      <div className="fixed right-0 md:right-0 md:left-0 z-10 bg-white">
         <AlertReact
           header={`PenguHosting Team`}
           btnText={"Close"}
@@ -100,7 +100,7 @@ const Contact = () => {
           <h2 className="text-3xl mb-1">Kontaktiere uns hier über E-Mail</h2>
           <span className="text-[15px] text-white/80">Ihr könnt uns aber auch über Twitter, Instagram oder Discord kontaktieren!</span>
         </div>
-        <form onSubmit={handleSubmitEmail} className="bg-blue-50 text-black flex flex-row px-12 py-6 min-h-[70vh] min-w-[340px] mx-3 rounded-md md:mx-auto max-w-[900px] gap-2 ">
+        <form onSubmit={handleSubmitEmail} className="bg-blue-50 shadow-xl text-black flex flex-row px-12 py-6 min-h-[70vh] min-w-[340px] mx-3 rounded-md md:mx-auto max-w-[900px] gap-2 ">
           <div className="flex flex-col w-full md:w-[50%] gap-3">
             <div className="mb-4 font-semibold">
               <p className="uppercase text-black/50">Get In Touch</p>
