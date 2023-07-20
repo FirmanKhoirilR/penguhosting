@@ -6,16 +6,18 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
   const [active, setActive] = useState(null);
   const [searchDomain, setSearchDomain] = useState("");
   const [modelDomain, setModelDomain] = useState(false);
-  const [linkName, setLinkName] = useState("Webhosting");
+  const [linkName, setLinkName] = useState("");
   const [loadingEmailSubmit, setLoadingEmailSubmit] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
+  const [user, setUser] = useState(null);
+  const [wrongImageLogin, setWrongImageLogin] = useState(false);
+  const [wrongImageType, setWrongImageType] = useState(false);
   const [formEmail, setFormEmail] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [isSignup, setIsSignup] = useState(false);
-
   const [formLogin, setFormLogin] = useState({
     userName: "",
     image: "",
@@ -31,9 +33,6 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     text: "",
     show: false,
   });
-
-  const [user, setUser] = useState(null);
-
   const [formCreateBlog, setFormCreateBlog] = useState({
     title: "",
     about: "",
@@ -42,9 +41,6 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     date: new Date(),
     imageAsset: null,
   });
-
-  const [wrongImageLogin, setWrongImageLogin] = useState(false);
-  const [wrongImageType, setWrongImageType] = useState(false);
 
   return (
     <StateContext.Provider
