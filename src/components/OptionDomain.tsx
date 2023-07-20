@@ -18,7 +18,7 @@ const OptionDomain = ({ item }: IDataDomain) => {
         <div className={`flex items-center justify-between gap-1 mb-6 rounded-xl md:mx-4 ${item.domain_registered === "no" ? "bg-green-400" : "bg-red-500"} py-2 px-4 md:px-6`}>
           <div className="flex items-center gap-2">
             <h1 className="font-semibold text-sm">{item.domain_name}</h1>
-            <span>{item.domain_registered === "no" ? "is avaiable" : "is already taken"}</span>
+            <span className="text-[12px]">{item.domain_registered === "no" ? "is avaiable" : "is already taken"}</span>
           </div>
           {item.domain_registered === "no" ? (
             <>
@@ -53,7 +53,7 @@ const OptionDomain = ({ item }: IDataDomain) => {
             <div className="flex gap-1 w-full mx-4 text-lg justify-between items-center" key={iteem.name}>
               {item.domain_name === `${domainOption[0]}${iteem.name}` ? null : (
                 <>
-                  <div className="text-sm flex items-center gap-1">
+                  <div className="text-[14px] md:text-base flex items-center gap-1">
                     <h1 className=" font-semibold">
                       {domainOption[0]}
                       {iteem.name}
@@ -61,15 +61,15 @@ const OptionDomain = ({ item }: IDataDomain) => {
                     <span>is avaiable!</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <p className="text-yellow-400">{iteem.price}</p>
+                    <p className="text-yellow-400 text-[14px] md:text-base">{iteem.price}</p>
                     <button
-                      className="flex items-center rounded-xl text-black px-4 gap-2 hover:bg-white transition duration-300 bg-yellow-400 font-semibold text-sm hover:bg- py-2"
+                      className="flex items-center rounded-full md:rounded-xl text-black px-2 md:px-4 gap-2 hover:bg-white transition duration-300 bg-yellow-400 font-semibold text-sm hover:bg- py-2"
                       type="button"
                       name="buttonPurchase"
                       aria-label="buttonPurchase"
                     >
                       <SlBasket size={20} />
-                      Purchase
+                      <span className="hidden md:block">Purchase</span>
                     </button>
                   </div>
                 </>

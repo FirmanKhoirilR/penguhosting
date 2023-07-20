@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AGB, About, Blog, Contact, CreateBlog, Datenschutz, Domain, GameServer, Home, Impressium, Login, VPSHosting, WebHosting } from "./pages";
+import { AGB, About, Blog, Contact, CreateBlog, Datenschutz, DetailBlog, Domain, GameServer, Home, Impressium, Login, VPSHosting, WebHosting } from "./pages";
 import { Footer, Navbar, Sidebar } from "./components";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
@@ -29,6 +29,7 @@ function App() {
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/agb" element={<AGB />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<DetailBlog />} />
         <Route path="/impressum" element={<Impressium />} />
         <Route path="/post-blog" element={<CreateBlog />} />
       </Routes>

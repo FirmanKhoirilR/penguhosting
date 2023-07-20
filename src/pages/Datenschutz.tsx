@@ -9,7 +9,7 @@ const Datenschutz = () => {
     divRef?.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
   return (
-    <div ref={divRef} className="bg-white py-14">
+    <div ref={divRef} className="bg-white py-14 px-2">
       <Container>
         <h1 className="text-[32px] md:text-[56px] font-bold border-b-8 pb-2 border-yellow-500 w-24">Datenschutzerklärung</h1>
         <div className="mt-10 flex flex-col gap-2 font-semibold">

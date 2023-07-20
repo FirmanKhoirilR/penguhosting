@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="p-3 flex items-center shadow-md sticky top-0 z-20 justify-between md:justify-around bg-white">
       <Link to={"/"} className="flex items-center" onClick={() => setLinkName("home")}>
-        <img src={Pengu} alt="Shark" className="w-52 h-[52px]" />
+        <img src={Pengu} alt="Shark" className="w-52 h-[60px]" />
       </Link>
       <div className="hidden md:flex items-center gap-6 lg:gap-10 font-semibold text-black/60 tracking-[0.001em]">
         {navbarLink.map((link: TLink) => (

@@ -10,7 +10,7 @@ const AGB = () => {
   }, []);
 
   return (
-    <div ref={divRef} className="bg-zinc-100 w-full flex flex-col items-center font-semibold py-10">
+    <div ref={divRef} className="bg-zinc-100 w-full flex flex-col items-center px-2 font-semibold py-10">
       <Container sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
         <h1 className="text-[56px] font-bold mb-10 border-b-8 border-yellow-500 w-[48px]">AGB</h1>
         {agbDesc.map((item) => (

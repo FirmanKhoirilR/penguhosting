@@ -5,7 +5,7 @@ import { CardFitureOffer } from ".";
 
 const FitureOffer = () => {
   return (
-    <div className="bg-background min-h-screen pt-10 w-full text-white">
+    <div className="bg-background min-h-screen pt-10 px-5 w-full text-white">
       <div className="text-center  font-semibold pt-8 flex flex-col gap-4">
         <span className="text-yellow-200 uppercase text-[18px]"> unsere features</span>
         <h1 className="text-[32px]">Was wir alles bieten</h1>
@@ -27,7 +27,7 @@ const FitureOffer = () => {
               <div className="flex text-center md:text-start flex-col gap-2">
                 <h1 className="text-[22px] md:text-[26px]">
                   {item.title}
-                  <span className="text-blue-500"> {item.titleblue}</span>
+                  <span className="text-blue-400"> {item.titleblue}</span>
                 </h1>
                 <p className=" text-white/70 text-[12px] md:text-sm">{item.description}</p>
               </div>

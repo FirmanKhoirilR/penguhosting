@@ -12,8 +12,10 @@ const WebHosting = () => {
     divRef?.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
   return (
-    <section ref={divRef} className="pb-20 bg-slate-100 mx-[6px]">
-      <SearchDomain />
+    <section ref={divRef} className="pb-20 bg-slate-100 px-[6px]">
+      <div className="mx-[-6px]">
+        <SearchDomain />
+      </div>
       <img src={wavesOne} alt="waves blue" className="absolute mx-[-6px]" />
       <div className="text-center mt-20 md:mt-48">
         <h1 className=" text-[30px] md:text-[36px] font-extrabold px-2 text-blue-400">Beginnen Sie mit günstigem Hosting von PenguHosting</h1>

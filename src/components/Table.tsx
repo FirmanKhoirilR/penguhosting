@@ -3,7 +3,7 @@ import { ITable } from "../types/Types";
 const Table = ({ item, only }: ITable) => {
   return (
     <div className="flex items-center font-semibold  bg-pink-500 flex-col justify-around w-full">
-      <div className=" w-full text-center text-white py-4">
+      <div className=" w-full text-center text-white text-sm md:text-lg py-4">
         <h1>{item.title}</h1>
       </div>
       <div className="flex bg-white w-full flex-col gap-2 items-center">

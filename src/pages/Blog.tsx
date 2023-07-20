@@ -8,12 +8,20 @@ import { IoMdCreate } from "react-icons/io";
 import { useQuery } from "react-query";
 import { useEffect, useRef } from "react";
 import { blank } from "../assets";
+import { useGlobalContext } from "../hooks/StateContext";
+import { useGoogleLogin } from "@react-oauth/google";
+import { AiFillGoogleCircle } from "react-icons/ai";
 
 const Blog = () => {
+  const { user }: any = useGlobalContext();
   const { data, isLoading, isFetching, isSuccess } = useQuery("blogQuery", () => client.fetch(feedQuery), {
     refetchOnWindowFocus: false,
     staleTime: 3000,
     refetchInterval: 3000,
+  });
+
+  const CustomGoogleLogin = useGoogleLogin({
+    onSuccess: (token) => console.log(token),
   });
 
   const divRef = useRef<HTMLDivElement | any>(null);
@@ -27,10 +35,16 @@ const Blog = () => {
       <Container>
         <div className="flex items-center justify-between">
           <h1 className="text-[56px] font-bold mb-10 border-b-8 border-yellow-500 w-[48px]">Blog</h1>
-          <Link to={`/post-blog`} className="flex gap-2 items-center mb-10 bg-blue-500 hover:bg-blue-600 py-2 md:px-3 px-2 rounded-full md:rounded-lg text-white">
-            <span className="hidden md:block font-semibold"> Create Blog</span>
-            <IoMdCreate size={25} />
-          </Link>
+          {user ? (
+            <Link to={`/post-blog`} className="flex gap-2 items-center mb-10 shadow-lg bg-blue-500 hover:bg-blue-600 py-2 md:px-3 px-2 rounded-full md:rounded-lg text-white">
+              <span className="hidden md:block font-semibold"> Create Blog</span>
+              <IoMdCreate size={25} />
+            </Link>
+          ) : (
+            <button type="button" className="p-2 text-white bg-blue-500 rounded-full hover:bg-blue-600" onClick={() => CustomGoogleLogin()}>
+              <AiFillGoogleCircle size={25} />
+            </button>
+          )}
         </div>
         {data?.length > 0 ? (
           isLoading && isFetching ? (

@@ -6,6 +6,9 @@ export default {
       backgroundColor: {
         background: "#1e3a8a",
       },
+      screens: {
+        xs: "450px",
+      },
       fontWeight: {
         semibold: 600,
       },

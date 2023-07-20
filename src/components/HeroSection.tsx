@@ -22,11 +22,13 @@ const HeroSection = () => {
           ))}
         </div>
         <div className="mt-8 md:mt-14 flex px-1 text-white  justify-center gap-4 items-center">
-          <h1 className="text-yellow-400 text-sm md:text-xl font-bold">Sosial Media</h1>
-          <AiOutlineArrowRight size={20} />
+          <div className="flex gap-2 items-center">
+            <h1 className="text-yellow-400  text-[12px] xs:text-[14ox] md:text-xl font-bold">Sosial Media</h1>
+            <AiOutlineArrowRight size={20} />
+          </div>
           <div className="flex items-center gap-1.5 md:gap-2" id="#">
             {sosialMedia.map((item, i: number) => (
-              <motion.a target="_blank" whileInView={{ scale: [0, 1] }} transition={{ delay: i * 0.5, duration: 0.6 }} href={item.url} className={`p-2 rounded-full  text-[28px] ${item.className}`} key={item.name}>
+              <motion.a target="_blank" whileInView={{ scale: [0, 1] }} transition={{ delay: i * 0.5, duration: 0.6 }} href={item.url} className={`p-[6px] md:p-2 rounded-full  text-[28px] ${item.className}`} key={item.name}>
                 {item.icon}
               </motion.a>
             ))}

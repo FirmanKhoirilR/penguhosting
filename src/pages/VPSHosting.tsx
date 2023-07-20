@@ -12,7 +12,7 @@ const VPSHosting = () => {
     divRef?.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
   return (
-    <section ref={divRef} className="pb-20 pt-10 bg-slate-100 mx-[6px]">
+    <section ref={divRef} className="pb-20 pt-10 bg-slate-100 px-[16px]">
       <div className="text-center">
         <h1 className=" text-[30px] md:text-[36px] font-extrabold px-2 text-blue-400">Beginnen Sie mit günstigem Hosting von PenguHosting</h1>
         <p className="text-black/70">
@@ -28,19 +28,19 @@ const VPSHosting = () => {
         <span className="text-yellow-500 uppercase text-[18px]"> unsere features</span>
         <h1 className="text-[32px]">Was wir alles bieten</h1>
       </div>
-      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[180px] max-w-[1000px] m-auto">
+      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[160px] max-w-[1000px] m-auto">
         {vpnPaketeHosting.map((item: TTable) => (
           <Table item={item} key={item.title} />
         ))}
       </div>
-      <img src={wavesTwo} className="absolute -mx-[6px]" />
+      <img src={wavesTwo} loading="lazy" className="absolute -mx-[6px]" />
       <div className="bg-background pt-32 md:pt-40  -mx-[6px] text-white">
         <div className="text-center   font-semibold justify-center items-center pt-8 flex flex-col gap-4">
           <span className="text-yellow-500 font-bold uppercase text-[18px]">Schnelle VPS</span>
           <img src={alarm} alt="alarm" width={64} />
           <h1 className="text-[32px]">In Minuten Online..</h1>
         </div>
-        <div className="mt-12 md:flex-row flex-col gap-4 text-white p-4 flex items-center  justify-evenly">
+        <div className="mt-12 md:flex-row flex-col gap-4 px-8 md:px-4 text-white py-4 flex items-center  justify-evenly">
           <img src={fast} alt="Rocket Launching" className="w-[300px] md:w-[350px] h-[300px] md:h-[350px]" />
           <div className="max-w-[600px]">
             <h1 className="font-bold text-yellow-500 text-[26px] md:text-[28px]">Blitzschnelles Hosting sorgt für eine bessere Webseite.</h1>
