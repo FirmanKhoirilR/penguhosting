@@ -14,6 +14,7 @@ export { default as amd } from "./amd.png";
 export { default as alarm } from "./alarm.webp";
 export { default as fast } from "./fast.svg";
 export { default as blog } from "./blog.svg";
+export { default as blank } from "./blank.svg";
 export { default as wavesTwo } from "./wavesTwo.svg";
 export { default as wavesOne } from "./wavesOne.svg";
 export { default as video } from "./placeholder.mp4";

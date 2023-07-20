@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { IoMdCreate } from "react-icons/io";
 import { useQuery } from "react-query";
 import { useEffect, useRef } from "react";
+import { blank } from "../assets";
 
 const Blog = () => {
   const { data, isLoading, isFetching, isSuccess } = useQuery("blogQuery", () => client.fetch(feedQuery), {
@@ -20,6 +21,7 @@ const Blog = () => {
   useEffect(() => {
     divRef?.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
+
   return (
     <div ref={divRef} className="bg-white py-10">
       <Container>
@@ -30,19 +32,29 @@ const Blog = () => {
             <IoMdCreate size={25} />
           </Link>
         </div>
-        {isLoading && isFetching ? (
-          <div className="flex items-center justify-center">
-            <Loading />
-          </div>
-        ) : (
-          isSuccess &&
-          data && (
-            <div className="flex flex-col gap-4">
-              {data?.map((item: TBlog) => (
-                <CardBlog key={item?._id} item={item} />
-              ))}
+        {data?.length > 0 ? (
+          isLoading && isFetching ? (
+            <div className="flex items-center justify-center">
+              <Loading />
             </div>
+          ) : (
+            isSuccess &&
+            data && (
+              <div className="flex flex-col gap-4">
+                {data?.map((item: TBlog) => (
+                  <CardBlog key={item?._id} item={item} />
+                ))}
+              </div>
+            )
           )
+        ) : (
+          <div className="flex flex-col gap-4 justify-center items-center">
+            <h1 className="font-bold text-2xl"> Didn't have Blog</h1>
+            <img src={blank} alt="Didn't have blog " width={200} height={250} />
+            <Link to={"/post-blog"} className="text-lg py-2 transition duration-300 hover:bg-yellow-500 hover: px-3 bg-blue-500 text-white rounded-lg mt-4 shadow-lg">
+              Create Blog
+            </Link>
+          </div>
         )}
       </Container>
     </div>

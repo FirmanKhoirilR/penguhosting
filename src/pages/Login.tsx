@@ -71,6 +71,17 @@ const Login = () => {
                 <label className="text-sm text-black/70">Your Email</label>
                 <input required type="email" value={formLogin.email} onChange={(e) => setFormLogin({ ...formLogin, email: e.target.value })} placeholder="Email" className="font-normal py-2 px-4 outline-none bg-slate-100 rounded-lg" />
               </div>
+              <div className="flex font-semibold flex-col gap-3 w-full max-w-[450px]">
+                <label className="text-sm text-black/70">Your Password</label>
+                <input
+                  required
+                  type="password"
+                  value={formLogin.password}
+                  onChange={(e) => setFormLogin({ ...formLogin, password: e.target.value })}
+                  placeholder="Password"
+                  className="font-normal py-2 px-4 outline-none bg-slate-100 rounded-lg"
+                />
+              </div>
             </>
           ) : (
             <>

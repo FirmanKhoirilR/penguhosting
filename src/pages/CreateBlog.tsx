@@ -12,6 +12,9 @@ const CreateBlog = () => {
   const queryClient = useQueryClient();
 
   const blogMutatipn = useMutation((doc: any) => client.create(doc), {
+    onMutate: () => {
+      queryClient.invalidateQueries("blogQuery");
+    },
     onSuccess: () => {
       queryClient.invalidateQueries("blogQuery");
 
@@ -122,7 +125,7 @@ const CreateBlog = () => {
             <label className="text-sm text-black/70">Title</label>
             <input
               type="text"
-              placeholder="Add your Title"
+              placeholder="Title Blog"
               required
               value={formCreateBlog.title}
               onChange={(e) => setFormCreateBlog({ ...formCreateBlog, title: e.target.value })}
@@ -130,26 +133,27 @@ const CreateBlog = () => {
             />
           </div>
 
-          <div className="w-[450px] my-2 flex items-center rounded-xl gap-2 bg-blue-100 p-1">
-            {user && (
-              <>
-                <img loading="lazy" src={user?.image} alt={user?.userName} height={40} width={40} className="rounded-full" />
-                <p className="font-semibold">{user.userName}</p>
-              </>
-            )}
-            {users && (
-              <>
-                <img loading="lazy" src={parseUser?.picture} alt={parseUser?.name} height={40} width={40} className="rounded-full" />
-                <p className="font-semibold">{parseUser.name}</p>
-              </>
-            )}
-          </div>
+          {users && user && (
+            <div className="w-[450px] my-2 flex items-center rounded-xl gap-2 bg-blue-100 p-1">
+              {user ? (
+                <>
+                  <img loading="lazy" src={user?.image} alt={user?.userName} height={40} width={40} className="rounded-full" />
+                  <p className="font-semibold">{user.userName}</p>
+                </>
+              ) : (
+                <>
+                  <img loading="lazy" src={parseUser?.picture} alt={parseUser?.name} height={40} width={40} className="rounded-full" />
+                  <p className="font-semibold">{parseUser.name}</p>
+                </>
+              )}
+            </div>
+          )}
 
           <div className="flex flex-col font-semibold gap-3">
             <label className="text-sm text-black/70">Description</label>
             <textarea
               rows={5}
-              placeholder="Add your Description"
+              placeholder="Description Blog"
               required
               value={formCreateBlog.description}
               onChange={(e) => setFormCreateBlog({ ...formCreateBlog, description: e.target.value })}
@@ -162,7 +166,7 @@ const CreateBlog = () => {
         </div>
       </div>
       <div className="flex flex-col relative items-center gap-1 md:gap-2">
-        <h1 className="text-sky-500 font-bold tracking-tight select-none text-[40px]">Post Article</h1>
+        <h1 className="text-sky-500 font-bold tracking-tight select-none text-[40px]">Post Blog</h1>
         <img src={blog} alt="adding Blog" className="w-[300px] md:w-[500px] h-[350px]" />
         <div className="p-3 bg-sky-500 text-white rounded-full rotate-[20deg] absolute f;ex items-center  -right-5 top-20 md:right-2">
           <AiOutlineUserAdd size={20} />
