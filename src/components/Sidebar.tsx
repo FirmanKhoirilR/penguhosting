@@ -8,13 +8,15 @@ import { userQuery } from "../hooks/userQuery";
 import { client } from "../client";
 const Sidebar = () => {
   const { toogleSidebar, setUser, user, setToogleSidebar, setLinkName, linkName }: any = useGlobalContext();
-
   const users: any = localStorage.getItem("user");
+  // get data local storage of name user
   const parseUser = JSON.parse(users);
-
+  // and parse the user data
   useEffect(() => {
     const query = userQuery(parseUser?.sub);
+    // get query only userId
     client.fetch(query).then((data) => {
+      // take first data only
       setUser(data[0]);
     });
   }, []);

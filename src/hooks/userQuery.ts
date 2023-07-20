@@ -1,10 +1,12 @@
 export const userQuery = (userId: string) => {
+  //get only user in sanity document specific by UserId as a params
   const query = `*[_type == "user" && _id == '${userId}']`;
 
   return query;
 };
 
 export const blogDetail = (id: string | any) => {
+  //get only pin/blog in sanity document specific by blog id as a params
   const query = `*[_type == "pin" && _id == '${id}'] {
     image{
       asset->{
@@ -32,6 +34,7 @@ export const blogDetail = (id: string | any) => {
   return query;
 };
 
+// feedQuery get all the data inside of pin sanity document
 export const feedQuery = `*[_type == "pin"] | order(_createdAt desc) {
   image{
     asset->{

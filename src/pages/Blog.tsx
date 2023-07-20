@@ -2,26 +2,24 @@ import { feedQuery } from "../hooks/userQuery";
 import { client } from "../client";
 import { Container } from "@mui/material";
 import { CardBlog, Loading } from "../components";
-import { TBlog } from "../types/Types";
-import { Link } from "react-router-dom";
+import { IUser, TBlog } from "../types/Types";
+import { Link, useNavigate } from "react-router-dom";
 import { IoMdCreate } from "react-icons/io";
 import { useQuery } from "react-query";
 import { useEffect, useRef } from "react";
 import { blank } from "../assets";
 import { useGlobalContext } from "../hooks/StateContext";
-import { useGoogleLogin } from "@react-oauth/google";
-import { AiFillGoogleCircle } from "react-icons/ai";
+import { GoogleLogin } from "@react-oauth/google";
+import jwtDecode from "jwt-decode";
 
 const Blog = () => {
   const { user }: any = useGlobalContext();
+  const navigate = useNavigate();
+  // useNavigate hook for navigate to other page
   const { data, isLoading, isFetching, isSuccess } = useQuery("blogQuery", () => client.fetch(feedQuery), {
     refetchOnWindowFocus: false,
     staleTime: 3000,
     refetchInterval: 3000,
-  });
-
-  const CustomGoogleLogin = useGoogleLogin({
-    onSuccess: (token) => console.log(token),
   });
 
   const divRef = useRef<HTMLDivElement | any>(null);
@@ -41,9 +39,32 @@ const Blog = () => {
               <IoMdCreate size={25} />
             </Link>
           ) : (
-            <button type="button" className="p-2 text-white bg-blue-500 rounded-full hover:bg-blue-600" onClick={() => CustomGoogleLogin()}>
-              <AiFillGoogleCircle size={25} />
-            </button>
+            <GoogleLogin
+              onSuccess={(res) => {
+                const token: any = res.credential;
+                const decodedToken = jwtDecode<IUser>(token);
+
+                const { name, email, picture, sub } = decodedToken;
+                localStorage.setItem("user", JSON.stringify({ name, email, picture, sub }));
+
+                const doc: any = {
+                  _id: sub,
+                  _type: "user",
+                  userName: name,
+                  image: picture,
+                  email: email,
+                };
+
+                client
+                  .createIfNotExists(doc)
+                  .then(() => {
+                    navigate("/", { replace: true });
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }}
+            />
           )}
         </div>
         {data?.length > 0 ? (

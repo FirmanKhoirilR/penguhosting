@@ -1,5 +1,4 @@
 import { cardHome, sosialMedia } from "../utils/Dummydata";
-import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { TCard } from "../types/Types";
 import { CardGame } from ".";
@@ -27,10 +26,10 @@ const HeroSection = () => {
             <AiOutlineArrowRight size={20} />
           </div>
           <div className="flex items-center gap-1.5 md:gap-2" id="#">
-            {sosialMedia.map((item, i: number) => (
-              <motion.a target="_blank" whileInView={{ scale: [0, 1] }} transition={{ delay: i * 0.5, duration: 0.6 }} href={item.url} className={`p-[6px] md:p-2 rounded-full  text-[28px] ${item.className}`} key={item.name}>
+            {sosialMedia.map((item, i) => (
+              <a target="_blank" data-aos="zoom-in" data-aos-delay={`${i * 300}`} href={item.url} className={`p-[6px] md:p-2 rounded-full  text-[28px] ${item.className}`} key={item.name}>
                 {item.icon}
-              </motion.a>
+              </a>
             ))}
           </div>
         </div>

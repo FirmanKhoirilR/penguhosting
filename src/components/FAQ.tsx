@@ -4,6 +4,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const FAQ = () => {
   const { active, setActive }: any = useGlobalContext();
+  // this custom hooks
 
   return (
     <div className="bg-background flex flex-col px-6 md:px-0 items-center py-24 text-white">

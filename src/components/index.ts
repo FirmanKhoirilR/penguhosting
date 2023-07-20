@@ -16,3 +16,5 @@ export { default as CardGame } from "./CardGame";
 export { default as ModalTaken } from "./ModalTaken";
 export { default as CardFitureOffer } from "./CardFitureOffer";
 export { default as CardBlog } from "./CardBlog";
+
+// this all for dynamic import

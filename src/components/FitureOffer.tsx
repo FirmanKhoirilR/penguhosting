@@ -35,7 +35,7 @@ const FitureOffer = () => {
           ))}
         </div>
       </div>
-      <img src={waves} alt="waves" className="absolute" />
+      <img src={waves} alt="waves" className="absolute mx-[-20px]" />
     </div>
   );
 };

@@ -7,6 +7,7 @@ const Table = ({ item, only }: ITable) => {
         <h1>{item.title}</h1>
       </div>
       <div className="flex bg-white w-full flex-col gap-2 items-center">
+        {/* if there has only show null if dont have only show the price wordpress and visit */}
         {only ? (
           ""
         ) : (

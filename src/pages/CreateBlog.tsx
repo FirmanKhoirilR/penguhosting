@@ -19,30 +19,39 @@ const CreateBlog = () => {
       queryClient.invalidateQueries("blogQuery");
 
       navigate("/blog");
+      //
     },
   });
   const navigate = useNavigate();
 
   const uploadImage = (e: React.InputHTMLAttributes<HTMLImageElement> | any) => {
     const { type, name } = e.target.files[0];
+    // get the type and name only first target
 
     if (type === "image/png" || type === "image/jpeg" || type === "image/jpg" || type === "svg") {
+      // if the type of image is png, jpeg, jpg, and svg continue the above code
       setWrongImageType(false);
+      // don't show paragraf error
       setFormCreateBlog({ ...formCreateBlog, loading: true });
+      // set loading after upload image
       client.assets
         .upload("image", e.target.files[0], {
           contentType: type,
+
           filename: name,
         })
         .then((document) => {
           setFormCreateBlog({ ...formCreateBlog, imageAsset: document, loading: false });
+          // set imageAsset as document after we ipload it and not show loading state
         })
         .catch((err) => console.log("Console", err));
     } else {
       setWrongImageType(true);
+      // show wrong image paragraf
     }
   };
 
+  // format Date for creating the year-month-day time
   function formatDate() {
     const dateObj = new Date(formCreateBlog.date);
 
@@ -61,7 +70,9 @@ const CreateBlog = () => {
 
   const saveBlog = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // after submit form dont refresh the page
     if (formCreateBlog.title && formCreateBlog.description && formCreateBlog.imageAsset?._id) {
+      // if title, description, imageAsset id is exist
       const doc = {
         _type: "pin",
         createdAt: dates,
@@ -80,6 +91,7 @@ const CreateBlog = () => {
           _ref: user?._id,
         },
       };
+      // trigger and fecthing new blog in sanity document
       blogMutatipn.mutate(doc);
     }
   };

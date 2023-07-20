@@ -11,7 +11,9 @@ const Contact = () => {
 
   const handleSubmitEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // after submit a form didn't refresh page
     setLoadingEmailSubmit(true);
+    // loading true or show the loading
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAIL_SERVICE_ID,
@@ -27,21 +29,28 @@ const Contact = () => {
       )
       .then(() => {
         setLoadingEmailSubmit(false),
+          // hidden the loading
           setAlert({
             type: "success",
             text: `Thank you ${formEmail.name}. We will get back to you as soon as possible`,
             show: true,
           });
+        // show success alert modal
         setFormEmail({ ...formEmail, name: "", email: "", subject: "", message: "" });
+        // and clear all forms
       })
       .catch(() => {
+        // if error
         setLoadingEmailSubmit(false),
+          // hidden the loading
           setAlert({
             type: "error",
             text: `Thank you ${formEmail.name}. We will get back to you as soon as possible`,
             show: true,
           });
+        // show error alert modal
         setFormEmail({ ...formEmail, name: "", email: "", subject: "", message: "" });
+        // and clear all forms
       });
   };
 
@@ -51,6 +60,7 @@ const Contact = () => {
       text: "",
       show: false,
     });
+    // for close the alert model
   };
 
   useEffect(() => {

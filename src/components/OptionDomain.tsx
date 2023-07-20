@@ -10,6 +10,7 @@ import { ModalTaken } from ".";
 const OptionDomain = ({ item }: IDataDomain) => {
   const { setModelDomain }: any = useGlobalContext();
   const domainOption = item.domain_name.split(".");
+  // for sorting domain name example firman.com -> firman com
 
   return (
     <>

@@ -13,27 +13,38 @@ const Login = () => {
 
   const uploadImage = (e: React.InputHTMLAttributes<HTMLImageElement> | any) => {
     const { type, name } = e.target.files[0];
+    // get the type and name only first target
 
     if (type === "image/png" || type === "image/jpeg" || type === "image/jpg" || type === "svg") {
+      // if the type of image is png, jpeg, jpg, and svg continue the above code
       setWrongImageLogin(false);
+      // don't show paragraf error
+      setFormLogin({ ...formLogin, loading: true });
+      // set loading after upload image
       client.assets
         .upload("image", e.target.files[0], {
           contentType: type,
+
           filename: name,
         })
         .then((document) => {
-          setFormLogin({ ...formLogin, imageAsset: document });
+          setFormLogin({ ...formLogin, imageAsset: document, loading: false });
+          // set imageAsset as document after we ipload it and not show loading state
         })
         .catch((err) => console.log("Console", err));
     } else {
       setWrongImageLogin(true);
+      // show wrong image paragraf
     }
   };
 
   const handleSubmitLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // don't want to refresh after submitting form
 
     localStorage.setItem("user", JSON.stringify({ name: formLogin.userName, email: formLogin.email, picture: formLogin.imageAsset?.url }));
+
+    // set all the user to local storage
   };
 
   return (

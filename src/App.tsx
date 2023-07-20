@@ -3,8 +3,15 @@ import "./App.css";
 import { AGB, About, Blog, Contact, CreateBlog, Datenschutz, DetailBlog, Domain, GameServer, Home, Impressium, Login, VPSHosting, WebHosting } from "./pages";
 import { Footer, Navbar, Sidebar } from "./components";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function App() {
+  // Running AOS in entire/inside in children
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main className="scroll-smooth hero__background">
       <button

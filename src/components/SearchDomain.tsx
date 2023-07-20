@@ -9,8 +9,11 @@ const SearchDomain = () => {
 
   const { data, refetch, isLoading, isFetching, isSuccess, isError } = useQuery(["domainChecker", searchDomain], () => checkDomain(searchDomain), {
     refetchOnWindowFocus: false,
+    // dont want to refresh for user in different tab
     staleTime: 60 * (60 * 1000),
+
     enabled: false,
+    // trigger for refecth
     refetchInterval: 60 * (60 * 1000),
   });
 
