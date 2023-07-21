@@ -18,8 +18,11 @@ const Blog = () => {
   // useNavigate hook for navigate to other page
   const { data, isLoading, isFetching, isSuccess } = useQuery("blogQuery", () => client.fetch(feedQuery), {
     refetchOnWindowFocus: false,
+
+    // dont refetch if user in another tab
     staleTime: 3000,
     refetchInterval: 3000,
+    // fresh the data in 3 second
   });
 
   const divRef = useRef<HTMLDivElement | any>(null);

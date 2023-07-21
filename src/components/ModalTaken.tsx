@@ -13,20 +13,20 @@ const ModalTaken = ({ item }: IDataDomain) => {
         <button aria-label="buttonCloseModel" name="buttonCloseModel" onClick={() => setModelDomain((prev: boolean) => !prev)} type="button" className="bg-red-500 hover:bg-red-600 p-2 rounded-full">
           <AiOutlineClose size={25} />
         </button>
-        <h1>Domain: {item.domain_name}</h1>
-        <p>Create: {moment(item.create_date).format("LL")}</p>
+        <h1>Domain: {item?.domain_name}</h1>
+        <p>Create: {moment(item?.create_date).format("LL")}</p>
         <p className="flex items-center gap-2">
-          <AiOutlineMail className="text-red-500" /> {item.domain_registrar.email_address}
+          <AiOutlineMail className="text-red-500" /> {item?.domain_registrar?.email_address}
         </p>
-        <p>Server: {item.domain_registrar.whois_server}</p>
-        <p>Phone: {item.domain_registrar.phone_number}</p>
-        <a href={item.domain_registrar.website_url} target="_blank">
-          Website: {item.domain_registrar.website_url}
+        <p>Server: {item?.domain_registrar?.whois_server}</p>
+        <p>Phone: {item?.domain_registrar?.phone_number}</p>
+        <a href={item?.domain_registrar?.website_url} target="_blank">
+          Website: {item?.domain_registrar?.website_url}
         </a>
         <p className="flex gap-2 items-center">
-          <FcExpired /> {moment(item.expiry_date).format("LLL")}
+          <FcExpired /> {moment(item?.expiry_date).format("LLL")}
         </p>
-        <p>Updated: {moment(item.update_date).fromNow()}</p>
+        <p>Updated: {moment(item?.update_date).fromNow()}</p>
       </div>
     </div>
   );

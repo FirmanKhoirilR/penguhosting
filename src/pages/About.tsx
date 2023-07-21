@@ -26,7 +26,7 @@ const About = () => {
             </p>
           </div>
         </Container>
-        <img src={wavesOne} alt="waves White" className="absolute" />
+        <img src={wavesOne} alt="waves White" className="absolute w-full" />
       </div>
       <div className="text-center flex gap-10 flex-col font-extrabold pt-20 md:pt-40 pb-10 uppercase  text-white bg-black/30">
         <h1 className="text-[26px] md:text-[46px] transition duration-300 hover:text-yellow-500">werde teil der penguhosting community</h1>

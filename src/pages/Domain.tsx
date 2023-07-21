@@ -15,7 +15,7 @@ const Domain = () => {
   return (
     <div ref={divRef}>
       <SearchDomain />
-      <img src={wavesOne} alt="waves blue" className="absolute" />
+      <img src={wavesOne} alt="waves blue" className="absolute w-full" />
 
       <div className="bg-slate-100">
         <div className="pt-48 text-center font-bold">

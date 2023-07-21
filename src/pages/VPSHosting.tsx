@@ -12,8 +12,8 @@ const VPSHosting = () => {
     divRef?.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
   return (
-    <section ref={divRef} className="pb-20 pt-10 bg-slate-100 px-[16px]">
-      <div className="text-center">
+    <section ref={divRef} className="pb-20 pt-10 bg-slate-100">
+      <div className="text-center px-2">
         <h1 className=" text-[30px] md:text-[36px] font-extrabold px-2 text-blue-400">Beginnen Sie mit günstigem Hosting von PenguHosting</h1>
         <p className="text-black/70">
           Bringen Sie Ihr Unternehmen online mit günstigem Hosting von PenguHosting. <br className="md:inline-block hidden" /> Genießen Sie Rabatte von bis zu 65% !
@@ -28,13 +28,15 @@ const VPSHosting = () => {
         <span className="text-yellow-500 uppercase text-[18px]"> unsere features</span>
         <h1 className="text-[32px]">Was wir alles bieten</h1>
       </div>
-      <div className="flex items-center mb-10 justify-center rounded-lg mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[160px] max-w-[1000px] m-auto">
-        {vpnPaketeHosting.map((item: TTable) => (
-          <Table item={item} key={item.title} />
-        ))}
+      <div className="px-4">
+        <div className="flex items-center mb-10 justify-center rounded-lg  mt-16 overflow-hidden bg-white shadow-[0px_4px_8px_0px] shadow-black/40 [&>*:nth-child(1)]:min-w-[160px] max-w-[1000px] m-auto">
+          {vpnPaketeHosting.map((item: TTable) => (
+            <Table item={item} key={item.title} />
+          ))}
+        </div>
       </div>
-      <img src={wavesTwo} loading="lazy" className="absolute -mx-[6px]" />
-      <div className="bg-background pt-32 md:pt-40  -mx-[6px] text-white">
+      <img src={wavesTwo} loading="lazy" alt="waves White" className="absolute w-full" />
+      <div className="bg-background pt-32 md:pt-40  text-white">
         <div className="text-center   font-semibold justify-center items-center pt-8 flex flex-col gap-4">
           <span className="text-yellow-500 font-bold uppercase text-[18px]">Schnelle VPS</span>
           <img src={alarm} alt="alarm" width={64} />
@@ -51,7 +53,7 @@ const VPSHosting = () => {
           </div>
         </div>
       </div>
-      <img src={wavesOne} className="-mx-[6px] absolute" alt="" />
+      <img src={wavesOne} className="w-full absolute" alt="" />
       <div className=" -mx-[6px] pt-20 md:pt-40 flex items-center flex-col justify-center">
         <div className="text-center   font-semibold justify-center items-center pt-8 flex flex-col gap-4">
           <span className="text-yellow-500 -tracking-tight font-bold uppercase text-[18px]">Entwickelt für Wachstum und Leistung</span>
